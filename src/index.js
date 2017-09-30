@@ -16,5 +16,14 @@ const config = {
 };
 firebase.initializeApp(config);
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+firebase.auth().signInAnonymously().then(
+    function (t) {
+        ReactDOM.render(<App />, document.getElementById('root'));
+        registerServiceWorker();
+    },
+    function (err) {
+        let code = err.code,
+            message = err.message;
+        alert("Сталася помилка:\r\n" + code + " - " + message);
+    }
+);
