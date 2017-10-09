@@ -11,12 +11,12 @@ export class Gallery extends Component {
                     <img src="./img/img-1.jpeg"/>
                     <img src="./img/img-2.jpg"/>
                 </div>
-                <p className="caption">
-                    CAPTION
-                </p>
-                <div className="counter">
-                    <span className="counter-point active">☻</span>
-                    <span className="counter-point">☺</span>
+                <div className="caption">
+                    <p>CAPTION</p>
+                    <div className="counter">
+                        <span className="counter-point active">☻</span>
+                        <span className="counter-point">☺</span>
+                    </div>
                 </div>
                 <span className="arrow right">
                     •

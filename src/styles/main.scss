@@ -3,29 +3,107 @@
 .content-line {
   display: flex;
   width: 100%;
-
-  img {
-    width: $line * 10;
-  }
+  max-height: $line * 40;
 
   .gallery {
     margin: $line * 2;
-    box-shadow: $line / - 5 $line / 5 $line / 2 0 $main;
+    box-shadow: $line / - 5 $line / 5 $line * 0.7 0 $main;
     flex-grow: 1;
     position: relative;
+    min-height: $line * 35;
+    max-height: $line * 35;
+    overflow: hidden;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      background: black;
+
+      img {
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    .arrow {
+      display: block;
+      position: absolute;
+      top: 40%;
+      color: white;
+      background: {
+        color: transparentize($blue, 0.3);
+      }
+      padding: $line * 2 $line;
+      transition: {
+        duration: $time;
+      }
+      font-family: Ico, Helvetica, sans-serif;
+      cursor: pointer;
+
+      &.left {
+        left: 0;
+        transform: translateX(-100%);
+      }
+
+      &.right {
+        right: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    .caption {
+      color: white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: {
+        color: transparentize($blue, 0.3);
+      }
+      transform: translateY(100%);
+      transition: {
+        duration: $time;
+        timing-function: linear;
+      }
+
+      p {
+        margin: 0;
+        padding: $line $line * 2;
+      }
+
+      .counter {
+        text-align: right;
+        padding: $line / 2;
+
+        .counter-point {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover {
+
+      .caption {
+        transform: translateY(0);
+      }
+
+      .arrow {
+        transform: translateX(0);
+      }
+    }
   }
 
   .content-block {
     flex-grow: 1;
     margin: $line * 2;
     padding: $line * 2;
-    box-shadow: $line / - 5 $line / 5 $line / 2 0 $main;
+    box-shadow: $line / - 5 $line / 5 $line * 0.7 0 $main;
     display: flex;
     flex-direction: column;
     position: relative;
 
     .caption {
       margin: 0;
+      font-family: Helvetica, sans-serif;
     }
 
     .content {
@@ -36,19 +114,59 @@
       position: absolute;
       bottom: $line;
       right: $line;
+      font-family: Ico, Helvetica, sans-serif;
+
+      span {
+        padding: 0 $line / 2;
+        cursor: pointer;
+
+        &:first-of-type {
+          border-right: $line / 10 solid black;
+        }
+      }
+    }
+
+    &:not(.news) {
+      .arrows {
+        transform: rotate(90deg);
+      }
     }
 
     &.news {
+      flex-basis: 65%;
 
       .content {
         display: flex;
 
-        > * {
+        .news-item {
           flex-grow: 1;
           flex-basis: 30%;
           justify-content: space-between;
-          align-items: baseline;
           padding: $line;
+          display: flex;
+          flex-direction: column;
+
+          .news-image {
+            flex-grow: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            img {
+              display: inline-block;
+              max-width: 100%;
+              flex-grow: 1;
+            }
+          }
+
+          h3 {
+            margin: 0;
+            padding: $line 0;
+          }
+
+          .date {
+            margin: 0;
+          }
         }
       }
     }
@@ -60,8 +178,17 @@
         display: flex;
         flex-direction: column;
 
-        article {
+        .anouncements-item {
           display: flex;
+
+          p {
+            margin: $line 0;
+            padding: $line / 2 $line * 1.5;
+
+            &.date {
+              border-right: $line / 5 solid black;
+            }
+          }
         }
       }
     }
@@ -70,6 +197,30 @@
     &.art,
     &.feedback {
       flex-basis: 30%;
+
+      .content {
+        display: flex;
+
+        [class$="item"] {
+          justify-content: space-between;
+          padding: $line;
+          display: flex;
+          flex-direction: column;
+
+          [class$="image"] {
+            flex-grow: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            img {
+              display: inline-block;
+              max-width: 100%;
+              flex-grow: 1;
+            }
+          }
+        }
+      }
     }
   }
 }

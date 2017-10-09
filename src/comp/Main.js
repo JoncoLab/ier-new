@@ -16,36 +16,42 @@ export class Main extends Component {
                 </ContentLine>
                 <ContentLine>
                     <ContentBlock name="news" caption="Новини">
-                        <article className="lol">
-                            <img src="./img/img-3.jpg"/>
+                        <article className="news-item">
+                            <div className="news-image">
+                                <img src="./img/img-3.jpg"/>
+                            </div>
                             <h3>Залучення іноземних туристів</h3>
                             <p className="date">Вересень 26, 2017</p>
                         </article>
-                        <article className="lol-2">
-                            <img src="./img/img-2.jpg"/>
+                        <article className="news-item">
+                            <div className="news-image">
+                                <img src="./img/img-2.jpg"/>
+                            </div>
                             <h3>Міграційна політика Швейцарії та Європи</h3>
                             <p className="date">Вересень 26, 2017</p>
                         </article>
-                        <article className="lol-3">
-                            <img src="./img/img-4.jpg"/>
+                        <article className="news-item">
+                            <div className="news-image">
+                                <img src="./img/img-4.jpg"/>
+                            </div>
                             <h3>Меморандум про співпрацю</h3>
                             <p className="date">Вересень 26, 2017</p>
                         </article>
                     </ContentBlock>
                     <ContentBlock name="anouncements" caption="Анонси">
-                        <article className="lol">
+                        <article className="anouncements-item">
                             <p className="date">30 ВЕР.</p>
                             <p>Анонс</p>
                         </article>
-                        <article className="lol">
+                        <article className="anouncements-item">
                             <p className="date">30 ВЕР.</p>
                             <p>Анонс</p>
                         </article>
-                        <article className="lol">
+                        <article className="anouncements-item">
                             <p className="date">30 ВЕР.</p>
                             <p>Анонс</p>
                         </article>
-                        <article className="lol">
+                        <article className="anouncements-item">
                             <p className="date">30 ВЕР.</p>
                             <p>Анонс</p>
                         </article>
@@ -53,20 +59,26 @@ export class Main extends Component {
                 </ContentLine>
                 <ContentLine>
                     <ContentBlock name="lectures" caption="Публічні лекції">
-                        <article className="lol">
-                            <img src="./img/img-3.jpg"/>
+                        <article className="lectures-item">
+                            <div className="lectures-image">
+                                <img src="./img/img-3.jpg"/>
+                            </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
                     </ContentBlock>
                     <ContentBlock name="art" caption="Студентська творчість">
-                        <article className="lol">
-                            <img src="./img/img-3.jpg"/>
+                        <article className="art-item">
+                            <div className="art-image">
+                                <img src="./img/img-3.jpg"/>
+                            </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
                     </ContentBlock>
                     <ContentBlock name="feedback" caption="Відгуки">
-                        <article className="lol">
-                            <img src="./img/img-3.jpg"/>
+                        <article className="feedback-item">
+                            <div className="feedback-image">
+                                <img src="./img/img-3.jpg"/>
+                            </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
                     </ContentBlock>
