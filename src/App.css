@@ -106,6 +106,21 @@ html {
           color: white;
           border: none;
           outline: none; }
+
+@font-face {
+  html body main {
+    font-family: Ico;
+    src: url("./fonts/ico.ttf"); } }
+
+@font-face {
+  html body main {
+    font-family: Helvetica;
+    src: url("./fonts/HelveticaRegular.ttf"); } }
+
+@font-face {
+  html body main {
+    font-family: OpenSans;
+    src: url("./fonts/OpenSansRegular.ttf"); } }
   html body main .content-line {
     display: flex;
     width: 100%; }
