@@ -17,12 +17,39 @@ html {
 
     header {
       width: 100%;
-      height: 120px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      height: $line * 12;
       background: {
-        color: #01487e;
+        color: $main;
+      }
+      padding: 0 10%;
+
+      .nav-menu {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid red;
+
+        .logo {
+          width: 12%;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .search-box {
+
+        }
+
+        .nav-bar {
+
+        }
+
+        .social-buttons {
+
+        }
       }
     }
 
