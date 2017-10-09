@@ -1,0 +1,8 @@
+.content-line {
+  display: flex;
+
+  img {
+    height: $line * 5;
+    width: $line * 5;
+  }
+}

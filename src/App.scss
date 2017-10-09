@@ -10,7 +10,7 @@ body {
 
 html {
   font: {
-    size: 20px;
+    size: $line * 2;
   }
 
   body {
@@ -137,14 +137,7 @@ html {
     }
 
     main {
-
-      * {
-        outline: $line / 10 solid red;
-      }
-
-      background: {
-        color: green;
-      }
+      @import "styles/main.scss";
     }
   }
 }

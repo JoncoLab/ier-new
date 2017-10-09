@@ -81,7 +81,8 @@ html {
           color: white;
           border: none;
           outline: none; }
-  html body main {
-    background-color: green; }
-    html body main * {
-      outline: 1px solid red; }
+  html body main .content-line {
+    display: flex; }
+    html body main .content-line img {
+      height: 50px;
+      width: 50px; }

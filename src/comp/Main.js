@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {ContentLine} from "./Main/ContentLine";
 import {ContentBlock} from "./Main/ContentBlock";
-import {Arrows} from "./Main/Arrows";
 import {Gallery} from "./Main/Gallery";
 
 export class Main extends Component {
