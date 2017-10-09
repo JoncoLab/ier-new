@@ -18,39 +18,58 @@ export class Main extends Component {
                 <ContentLine>
                     <ContentBlock name="news" caption="Новини">
                         <article className="lol">
-                            lol article tipa
+                            <img src="./img/img-3.jpg"/>
+                            <h3>Залучення іноземних туристів</h3>
+                            <p className="date">Вересень 26, 2017</p>
                         </article>
                         <article className="lol-2">
-                            lol article-2 tipa
+                            <img src="./img/img-2.jpg"/>
+                            <h3>Міграційна політика Швейцарії та Європи</h3>
+                            <p className="date">Вересень 26, 2017</p>
                         </article>
                         <article className="lol-3">
-                            lol article-3 tipa
+                            <img src="./img/img-4.jpg"/>
+                            <h3>Меморандум про співпрацю</h3>
+                            <p className="date">Вересень 26, 2017</p>
                         </article>
                     </ContentBlock>
                     <ContentBlock name="anouncements" caption="Анонси">
                         <article className="lol">
-                            lol article tipa
+                            <p className="date">30 ВЕР.</p>
+                            <p>Анонс</p>
                         </article>
-                        <article className="lol-2">
-                            lol article-2 tipa
+                        <article className="lol">
+                            <p className="date">30 ВЕР.</p>
+                            <p>Анонс</p>
                         </article>
-                        <article className="lol-3">
-                            lol article-3 tipa
+                        <article className="lol">
+                            <p className="date">30 ВЕР.</p>
+                            <p>Анонс</p>
                         </article>
-                        <article className="lol-4">
-                            lol article-4 tipa
+                        <article className="lol">
+                            <p className="date">30 ВЕР.</p>
+                            <p>Анонс</p>
                         </article>
                     </ContentBlock>
                 </ContentLine>
                 <ContentLine>
                     <ContentBlock name="lections" caption="Публічні лекції">
-                        <Arrows type="vertical"/>
+                        <article className="lol">
+                            <img src="./img/img-3.jpg"/>
+                            <h3 className="heading">HEADING</h3>
+                        </article>
                     </ContentBlock>
                     <ContentBlock name="art" caption="Студентська творчість">
-                        <Arrows type="horizontal"/>
+                        <article className="lol">
+                            <img src="./img/img-3.jpg"/>
+                            <h3 className="heading">HEADING</h3>
+                        </article>
                     </ContentBlock>
                     <ContentBlock name="feedback" caption="Відгуки">
-                        <Arrows type="vertical"/>
+                        <article className="lol">
+                            <img src="./img/img-3.jpg"/>
+                            <h3 className="heading">HEADING</h3>
+                        </article>
                     </ContentBlock>
                 </ContentLine>
             </main>
