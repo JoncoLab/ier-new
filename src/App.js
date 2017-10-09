@@ -3,6 +3,9 @@ import './App.css';
 import { Header } from "./comp/Header";
 import { Main } from "./comp/Main";
 import { Footer } from "./comp/Footer";
+import { ContactsBlock } from "./comp/Footer/Contacts/ContactsBlock";
+import { DownloadBlock } from "./comp/Footer/Download/DownloadBlock";
+import { SubscribeBtn } from "./comp/SubscribeBtn";
 
 class App extends Component {
   render() {
@@ -11,6 +14,9 @@ class App extends Component {
           <Header/>
           <Main/>
           <Footer/>
+          <ContactsBlock/>
+          <DownloadBlock/>
+          <SubscribeBtn/>
       </div>
     );
   }
