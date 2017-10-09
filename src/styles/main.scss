@@ -1,8 +1,15 @@
 .content-line {
   display: flex;
+  width: 100%;
 
   img {
     height: $line * 5;
     width: $line * 5;
+  }
+
+  .content-block {
+    flex-grow: 1;
+    margin: $line * 4;
+    box-shadow: $line / - 5 $line / 5 $line / 2 0 $main;
   }
 }
