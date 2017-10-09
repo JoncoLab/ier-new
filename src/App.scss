@@ -59,6 +59,10 @@ html {
             }
             margin: 0 $line 0 0;
             cursor: pointer;
+            background: {
+              color: $main;
+            }
+            z-index: 1;
           }
 
           #search {
@@ -71,6 +75,7 @@ html {
             }
             background: none;
             outline: none;
+            color: white;
             transform: translateX(-150%);
             transition: {
               duration: $time;
@@ -79,6 +84,10 @@ html {
 
             &::placeholder {
               color: white;
+            }
+
+            &.active {
+              transform: translateX(0);
             }
           }
         }
@@ -103,6 +112,7 @@ html {
               text: {
                 transform: uppercase;
               }
+              cursor: pointer;
             }
           }
 
@@ -121,8 +131,9 @@ html {
         }
 
         .add-menu {
+          position: relative;
           align-self: flex-start;
-          margin: $line / 2 0 0 0;
+          margin: $line 0 0 0;
 
           h2 {
             padding: 0;
@@ -133,12 +144,61 @@ html {
               size: 1.3em;
               weight: normal;
             }
+            cursor: pointer;
+          }
+
+          .drop-down {
+            padding: 0;
+            list-style: none;
+            color: $main;
+            font: {
+              size: 1em;
+              weight: bold;
+              family: Helvetica;
+            }
+            box-shadow: -3px 3px 7px 0 $main;
+
+            li {
+              padding: $line $line * 3;
+              transition: {
+                duration: $time;
+                timing-function: linear;
+              }
+              background: {
+                color: white;
+              }
+              cursor: pointer;
+
+              &:not(:last-of-type) {
+                border: {
+                  bottom: 3px solid $main;
+                }
+              }
+
+              span {
+                padding: 0;
+                font: {
+                  family: Ico;
+                  size: 1em;
+                }
+                color: white;
+              }
+
+              &:hover {
+                background: {
+                  color: $main;
+                }
+                color: white;
+                box-shadow: 1px 1px 3px 0 white;
+                transform: scale(1.02) translateY(-5px) translateX(-5px);
+              }
+            }
           }
         }
 
         .social-box {
           width: 15%;
-          margin: $line / 2  0 0 0;
+          margin: $line 0 0 0;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -150,8 +210,9 @@ html {
 
           .social-btn {
             color: white;
-            border: none;
-            outline: none;
+            text: {
+              decoration: none;
+            }
           }
         }
       }

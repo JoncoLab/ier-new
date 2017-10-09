@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 export class DropDown extends Component {
     render() {
         return (
-            <ul className="DropDown">
-                <li>DropDownItem</li>
-                <li>DropDownItem</li>
-                <li>DropDownItem</li>
-                <li>DropDownItem</li>
-                <li>DropDownItem</li>
+            <ul className="drop-down">
+                <li><span>•</span> DropDownItem</li>
+                <li><span>•</span> DropDownItem</li>
+                <li><span>•</span> DropDownItem</li>
+                <li><span>•</span> DropDownItem</li>
+                <li><span>•</span> DropDownItem</li>
             </ul>
         );
     }
