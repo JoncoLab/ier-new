@@ -3,6 +3,7 @@ import { Logo } from "./Logo";
 import { Search } from "./Search";
 import { NavBar } from "./NavBar";
 import { SocialButtons } from "./SocialButtons";
+import {AddMenu} from "./AddMenu";
 
 export class NavMenu extends Component {
     render() {
@@ -10,9 +11,11 @@ export class NavMenu extends Component {
             <nav className="nav-menu">
                 <Logo/>
                 <Search/>
-                <NavBar name="Абітурієнту"/>
-                <NavBar name="Студенту"/>
-                <NavBar name="ФМЕВ ☻"/>
+                <div className="main-menu">
+                    <NavBar name="Абітурієнту"/>
+                    <NavBar name="Студенту"/>
+                </div>
+                <AddMenu/>
                 <SocialButtons/>
             </nav>
         );

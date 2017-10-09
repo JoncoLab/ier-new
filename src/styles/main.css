@@ -1,2 +1,22 @@
+@font-face {
+  font-family: Ico;
+  src: url("./fonts/ico.ttf"); }
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./fonts/HelveticaRegular.ttf"); }
+
+@font-face {
+  font-family: OpenSans;
+  src: url("./fonts/OpenSansRegular.ttf"); }
+
 .content-line {
-  display: flex; }
+  display: flex;
+  width: 100%; }
+  .content-line img {
+    height: 50px;
+    width: 50px; }
+  .content-line .content-block {
+    flex-grow: 1;
+    margin: 40px;
+    box-shadow: -2px 2px 5px 0 #01487e; }

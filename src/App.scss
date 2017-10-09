@@ -30,7 +30,6 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
 
         .logo {
           width: 12%;
@@ -84,33 +83,55 @@ html {
           }
         }
 
-        .nav-bar {
-          padding: 0 $line;
-          color: white;
-          font: {
-            size: 1em;
-          }
-          border: 1px solid white;
+        .main-menu {
+          position: relative;
+          width: 35%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-          h2 {
-            padding: 0;
-            margin: 0;
-          }
-
-          &:first-of-type {
+          nav {
 
             h2 {
-              border: {
-                right: 3px solid white;
+              margin: 0;
+              padding: 0;
+              color: white;
+              font: {
+                family: Helvetica;
+                size: 1.5em;
+              }
+              text: {
+                transform: uppercase;
               }
             }
           }
 
-          &:last-of-type {
-            margin: $line / 2 0 0 0;
-            align-self: flex-start;
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 55%;
+            display: block;
+            content: '';
+            height: 100%;
+            width: 4px;
+            background: {
+              color: white;
+            }
+          }
+        }
+
+        .add-menu {
+          align-self: flex-start;
+          margin: $line / 2 0 0 0;
+
+          h2 {
+            padding: 0;
+            margin: 0;
+            color: white;
             font: {
-              family: Ico;
+              family: Ico, Helvetica;
+              size: 1.3em;
+              weight: normal;
             }
           }
         }

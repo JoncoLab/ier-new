@@ -1,3 +1,11 @@
 @font-face {
   font-family: Ico;
   src: url("./fonts/ico.ttf"); }
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./fonts/HelveticaRegular.ttf"); }
+
+@font-face {
+  font-family: OpenSans;
+  src: url("./fonts/OpenSansRegular.ttf"); }
