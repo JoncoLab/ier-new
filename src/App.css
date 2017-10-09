@@ -14,3 +14,7 @@ html {
     justify-content: space-between;
     align-items: center;
     background-color: #01487e; }
+  html body main {
+    background-color: green; }
+    html body main * {
+      outline: 1px solid red; }
