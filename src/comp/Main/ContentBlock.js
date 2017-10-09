@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Arrows} from "./Arrows";
 
 export class ContentBlock extends Component {
     render() {
@@ -8,6 +9,7 @@ export class ContentBlock extends Component {
                 <div className="content">
                     {this.props.children}
                 </div>
+                <Arrows/>
             </section>
         );
     }
