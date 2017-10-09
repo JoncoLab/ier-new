@@ -7,10 +7,12 @@ import { SocialButtons } from "./SocialButtons";
 export class NavMenu extends Component {
     render() {
         return (
-            <nav className="NavMenu">
+            <nav className="nav-menu">
                 <Logo/>
                 <Search/>
-                <NavBar/>
+                <NavBar name="Абітурієнту"/>
+                <NavBar name="Студенту"/>
+                <NavBar name="ФМЕВ ☻"/>
                 <SocialButtons/>
             </nav>
         );
