@@ -52,7 +52,7 @@ export class Main extends Component {
                     </ContentBlock>
                 </ContentLine>
                 <ContentLine>
-                    <ContentBlock name="lections" caption="Публічні лекції">
+                    <ContentBlock name="lectures" caption="Публічні лекції">
                         <article className="lol">
                             <img src="./img/img-3.jpg"/>
                             <h3 className="heading">HEADING</h3>

@@ -110,9 +110,40 @@ html {
     display: flex;
     width: 100%; }
     html body main .content-line img {
-      height: 50px;
-      width: 50px; }
+      width: 100px; }
+    html body main .content-line .gallery {
+      margin: 20px;
+      box-shadow: -2px 2px 5px 0 #01487e;
+      flex-grow: 1;
+      position: relative; }
     html body main .content-line .content-block {
       flex-grow: 1;
-      margin: 40px;
-      box-shadow: -2px 2px 5px 0 #01487e; }
+      margin: 20px;
+      padding: 20px;
+      box-shadow: -2px 2px 5px 0 #01487e;
+      display: flex;
+      flex-direction: column;
+      position: relative; }
+      html body main .content-line .content-block .caption {
+        margin: 0; }
+      html body main .content-line .content-block .arrows {
+        position: absolute;
+        bottom: 10px;
+        right: 10px; }
+      html body main .content-line .content-block.news .content {
+        display: flex; }
+        html body main .content-line .content-block.news .content > * {
+          flex-grow: 1;
+          flex-basis: 30%;
+          justify-content: space-between;
+          align-items: baseline;
+          padding: 10px; }
+      html body main .content-line .content-block.anouncements {
+        flex-basis: 25%; }
+        html body main .content-line .content-block.anouncements .content {
+          display: flex;
+          flex-direction: column; }
+          html body main .content-line .content-block.anouncements .content article {
+            display: flex; }
+      html body main .content-line .content-block.lectures, html body main .content-line .content-block.art, html body main .content-line .content-block.feedback {
+        flex-basis: 30%; }

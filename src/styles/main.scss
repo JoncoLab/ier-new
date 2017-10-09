@@ -3,13 +3,71 @@
   width: 100%;
 
   img {
-    height: $line * 5;
-    width: $line * 5;
+    width: $line * 10;
+  }
+
+  .gallery {
+    margin: $line * 2;
+    box-shadow: $line / - 5 $line / 5 $line / 2 0 $main;
+    flex-grow: 1;
+    position: relative;
   }
 
   .content-block {
     flex-grow: 1;
-    margin: $line * 4;
+    margin: $line * 2;
+    padding: $line * 2;
     box-shadow: $line / - 5 $line / 5 $line / 2 0 $main;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .caption {
+      margin: 0;
+    }
+
+    .content {
+
+    }
+
+    .arrows {
+      position: absolute;
+      bottom: $line;
+      right: $line;
+    }
+
+    &.news {
+
+      .content {
+        display: flex;
+
+        > * {
+          flex-grow: 1;
+          flex-basis: 30%;
+          justify-content: space-between;
+          align-items: baseline;
+          padding: $line;
+        }
+      }
+    }
+
+    &.anouncements {
+      flex-basis: 25%;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        article {
+          display: flex;
+        }
+      }
+    }
+
+    &.lectures,
+    &.art,
+    &.feedback {
+      flex-basis: 30%;
+    }
   }
 }
