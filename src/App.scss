@@ -259,5 +259,9 @@ html {
     main {
       @import "styles/main.scss";
     }
+
+    footer {
+      @import "styles/footer.scss";
+    }
   }
 }
