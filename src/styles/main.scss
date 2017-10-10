@@ -2,8 +2,10 @@
 
 .content-line {
   display: flex;
-  width: 100%;
-  max-height: $line * 40;
+  justify-content: center;
+  max-height: $line * 37.5;
+  margin: 0 auto;
+  width: 80%;
 
   .gallery {
     margin: $line * 2;
@@ -64,6 +66,9 @@
         duration: $time;
         timing-function: linear;
       }
+      font: {
+        weight: normal;
+      }
 
       p {
         margin: 0;
@@ -103,11 +108,21 @@
 
     .caption {
       margin: 0;
-      font-family: Helvetica, sans-serif;
+      font: {
+        family: Helvetica, sans-serif;
+        weight: normal;
+        size: 1.5em;
+      }
     }
 
     .content {
-
+      h3 {
+        font: {
+          weight: normal;
+          family: Helvetica, sans-serif;
+          size: 1em;
+        }
+      }
     }
 
     .arrows {
@@ -141,13 +156,14 @@
         .news-item {
           flex-grow: 1;
           flex-basis: 30%;
-          justify-content: space-between;
+          justify-content: center;
           padding: $line;
           display: flex;
           flex-direction: column;
 
           .news-image {
             flex-grow: 1;
+            max-height: 60%;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -162,10 +178,27 @@
           h3 {
             margin: 0;
             padding: $line 0;
+            position: relative;
+
+            &:after {
+              position: absolute;
+              bottom: 0;
+              display: block;
+              content: "";
+              width: 40%;
+              height: $line / 5;
+              background: {
+                color: $lightBlue;
+              }
+            }
           }
 
           .date {
-            margin: 0;
+            margin: $line 0 0;
+            font: {
+              family: Helvetica, sans-serif;
+              size: 0.75em;
+            }
           }
         }
       }
