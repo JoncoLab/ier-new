@@ -9,11 +9,15 @@ export class Footer extends Component {
     render() {
         return (
             <footer>
-                <FeedbackForm/>
-                <ContactsBtn/>
-                <DownloadBtn/>
-                <GoogleMaps/>
-                <Copyright/>
+                <section className="footer-content">
+                    <FeedbackForm/>
+                    <div className="footer-add">
+                        <ContactsBtn/>
+                        <DownloadBtn/>
+                        <GoogleMaps/>
+                        <Copyright/>
+                    </div>
+                </section>
             </footer>
         );
     }

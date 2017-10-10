@@ -261,6 +261,11 @@ html {
     }
 
     footer {
+      width: 100%;
+      height: $line * 45;
+      background: {
+        color: $main;
+      }
       @import "styles/footer.scss";
     }
   }

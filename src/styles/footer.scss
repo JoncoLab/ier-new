@@ -1,0 +1,185 @@
+@import "variables.scss";
+
+.footer-content {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  #FeedbackForm {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: {
+      color: white;
+    }
+
+    .FeedbackCaption {
+      width: 100%;
+      margin: 0;
+      padding: $line * 1.5 0;
+      background: {
+        color: $blue;
+      }
+      color: white;
+      font: {
+        family: Helvetica, sans-serif;
+        size: 1.3em;
+        weight: bold;
+      }
+      text: {
+        align: center;
+      }
+      box-shadow: 0 $line / 2 $line * 3 0 $black;
+      z-index: 1;
+    }
+
+    .feedback-content {
+      padding: $line * 2 0 0 0;
+      width: 80%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      input,
+      textarea:not(#submit) {
+        width: 90%;
+        padding: $line / 2 $line;
+        border: none;
+        outline: none;
+        resize: none;
+        font: {
+          family: Helvetica, sans-serif;
+          size: 1em;
+        }
+        color: $grey;
+        box-shadow: 0 $line / 5  0 0 $blue;
+        transition: {
+          duration: $time;
+          timing-function: linear;
+        }
+
+        &::placeholder {
+          color: $grey;
+        }
+
+        &:focus {
+          box-shadow: 0 3px 0 0 darken($blue, 5);
+        }
+      }
+
+      textarea {
+        height: 35%;
+      }
+
+      #submit {
+        width: 100%;
+        margin: 0 0 $line * 2 0;
+        padding: $line / 2 0;
+        background: {
+          color: $blue;
+        }
+        font: {
+          family: Helvetica, sans-serif;
+          size: 1.2em;
+          weight: bold;
+        }
+        color: white;
+        border: none;
+        outline: none;
+        transition: {
+          duration: $time;
+          timing-function: linear;
+        }
+        cursor: pointer;
+
+        &:hover {
+          background: {
+            color: darken($blue, 10);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-add {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+
+    #ContactsBtn,
+    #DownloadBtn {
+      width: 45%;
+      padding: $line * 1.5 0;
+      background: {
+        color: $blue;
+      }
+      color: white;
+      font: {
+        family: Helvetica, sans-serif;
+        size: 1.3em;
+        weight: bold;
+      }
+      text: {
+        align: center;
+      }
+      border: none;
+      outline: none;
+      transition: {
+        duration: $time;
+        timing-function: linear;
+      }
+      cursor: pointer;
+
+      &:hover {
+        background: {
+          color: darken($blue, 15);
+        }
+      }
+    }
+
+    #ContactsBtn {
+      align-self: flex-start;
+    }
+
+    #DownloadBtn {
+      align-self: flex-end;
+    }
+
+    .GoogleMaps {
+      width: 100%;
+      background: {
+        color: orange;
+      }
+      height: 60%;
+    }
+
+    .Copyright {
+      width: 100%;
+      margin: 0 0 $line * 2 0;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      span {
+        font: {
+          family: OpenSans, sans-serif;
+          size: 0.8em;
+          weight: normal;
+        }
+      }
+    }
+  }
+}
