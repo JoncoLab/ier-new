@@ -14,6 +14,8 @@ class App extends Component {
           <Header/>
           <Main/>
           <Footer/>
+          <ContactsBlock/>
+          <DownloadBlock/>
       </div>
     );
   }
