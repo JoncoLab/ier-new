@@ -46,3 +46,4 @@ yarn-error.log*
 *.db
 *.css
 *.css
+src/App.css
