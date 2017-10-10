@@ -30,6 +30,7 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1000;
 
         .logo {
           width: 12%;
@@ -99,7 +100,8 @@ html {
           justify-content: space-between;
           align-items: center;
 
-          nav {
+          .menu-item {
+            position: relative;
 
             h2 {
               margin: 0;
@@ -113,6 +115,11 @@ html {
                 transform: uppercase;
               }
               cursor: pointer;
+            }
+            &:hover {
+              .drop-down {
+                transform: scaleY(1);
+              }
             }
           }
 
@@ -147,51 +154,62 @@ html {
             cursor: pointer;
           }
 
-          .drop-down {
-            padding: 0;
-            list-style: none;
-            color: $main;
-            font: {
-              size: 1em;
-              weight: bold;
-              family: Helvetica;
+          &:hover {
+            .drop-down {
+              transform: scaleY(1);
             }
-            box-shadow: -3px 3px 7px 0 $main;
+          }
+        }
 
-            li {
-              padding: $line $line * 3;
-              transition: {
-                duration: $time;
-                timing-function: linear;
+        .drop-down {
+          width: $line * 20;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          padding: 0;
+          list-style: none;
+          color: $main;
+          font: {
+            size: 1em;
+            weight: bold;
+            family: Helvetica;
+          }
+          box-shadow: -3px 3px 7px 0 $main;
+          transition: {
+            duration: $time;
+            timing-function: linear;
+          }
+          transform: scaleY(0);
+          transform-origin: top;
+
+          li {
+            padding: $line $line * 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: {
+              duration: $time;
+              timing-function: linear;
+            }
+            background: {
+              color: white;
+            }
+            cursor: pointer;
+
+
+            span {
+              font: {
+                family: Ico, Helvetica, sans-serif;
+                size: 1em;
               }
+              color: white;
+            }
+
+            &:hover {
               background: {
-                color: white;
+                color: $main;
               }
-              cursor: pointer;
-
-              &:not(:last-of-type) {
-                border: {
-                  bottom: 3px solid $main;
-                }
-              }
-
-              span {
-                padding: 0;
-                font: {
-                  family: Ico;
-                  size: 1em;
-                }
-                color: white;
-              }
-
-              &:hover {
-                background: {
-                  color: $main;
-                }
-                color: white;
-                box-shadow: 1px 1px 3px 0 white;
-                transform: scale(1.02) translateY(-5px) translateX(-5px);
-              }
+              color: white;
             }
           }
         }
