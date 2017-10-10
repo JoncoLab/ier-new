@@ -15,6 +15,9 @@ html {
 
   body {
 
+    @import "styles/contacts-block.scss";
+    @import "styles/download-block.scss";
+
     header {
       width: 100%;
       height: $line * 12;
