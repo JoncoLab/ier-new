@@ -16,17 +16,17 @@ const config = {
 };
 firebase.initializeApp(config);
 
-// firebase.auth().signInAnonymously().then(
-//     function (t) {
-//         ReactDOM.render(<App />, document.getElementById('root'));
-//         registerServiceWorker();
-//     },
-//     function (err) {
-//         let code = err.code,
-//             message = err.message;
-//         alert("Сталася помилка:\r\n" + code + " - " + message);
-//     }
-// );
+firebase.auth().signInAnonymously().then(
+    function (t) {
+        ReactDOM.render(<App />, document.getElementById('root'));
+        registerServiceWorker();
+    },
+    function (err) {
+        let code = err.code,
+            message = err.message;
+        alert("Сталася помилка:\r\n" + code + " - " + message);
+    }
+);
 
 const root = document.getElementById('root');
 
