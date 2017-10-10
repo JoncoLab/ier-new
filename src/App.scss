@@ -64,6 +64,14 @@ html {
               color: $main;
             }
             z-index: 1;
+            transition: {
+              duration: $time / 2;
+              timing-function: linear;
+            }
+
+            &:hover {
+              text-shadow: 2px 2px 2px transparentize(white, 0.3);
+            }
           }
 
           #search {
@@ -94,6 +102,8 @@ html {
         }
 
         .main-menu {
+          align-self: flex-end;
+          margin: 0 0 $line * 2 0;
           position: relative;
           width: 35%;
           display: flex;
@@ -102,6 +112,7 @@ html {
 
           .menu-item {
             position: relative;
+            padding: $line / 2 0;
 
             h2 {
               margin: 0;
@@ -141,6 +152,8 @@ html {
           position: relative;
           align-self: flex-start;
           margin: $line 0 0 0;
+          padding: $line / 2 0;
+          cursor: pointer;
 
           h2 {
             padding: 0;
@@ -151,7 +164,6 @@ html {
               size: 1.3em;
               weight: normal;
             }
-            cursor: pointer;
           }
 
           &:hover {
@@ -164,7 +176,7 @@ html {
         .drop-down {
           width: $line * 20;
           position: absolute;
-          top: 100%;
+          top: 45%;
           left: 0;
           padding: 0;
           list-style: none;
@@ -230,6 +242,14 @@ html {
             color: white;
             text: {
               decoration: none;
+            }
+            transition: {
+              duration: $time / 2;
+              timing-function: linear;
+            }
+
+            &:hover {
+              text-shadow: 2px 2px 2px transparentize(white, 0.3);
             }
           }
         }

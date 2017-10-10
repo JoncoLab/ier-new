@@ -52,7 +52,11 @@ html {
           margin: 0 10px 0 0;
           cursor: pointer;
           background-color: #01487e;
-          z-index: 1; }
+          z-index: 1;
+          transition-duration: 0.1s;
+          transition-timing-function: linear; }
+          html body header .nav-menu .search-box .SearchIco:hover {
+            text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); }
         html body header .nav-menu .search-box #search {
           font-size: 1em;
           border-style: none;
@@ -68,13 +72,16 @@ html {
           html body header .nav-menu .search-box #search.active {
             transform: translateX(0); }
       html body header .nav-menu .main-menu {
+        align-self: flex-end;
+        margin: 0 0 20px 0;
         position: relative;
         width: 35%;
         display: flex;
         justify-content: space-between;
         align-items: center; }
         html body header .nav-menu .main-menu .menu-item {
-          position: relative; }
+          position: relative;
+          padding: 5px 0; }
           html body header .nav-menu .main-menu .menu-item h2 {
             margin: 0;
             padding: 0;
@@ -97,21 +104,22 @@ html {
       html body header .nav-menu .add-menu {
         position: relative;
         align-self: flex-start;
-        margin: 10px 0 0 0; }
+        margin: 10px 0 0 0;
+        padding: 5px 0;
+        cursor: pointer; }
         html body header .nav-menu .add-menu h2 {
           padding: 0;
           margin: 0;
           color: white;
           font-family: Ico, Helvetica;
           font-size: 1.3em;
-          font-weight: normal;
-          cursor: pointer; }
+          font-weight: normal; }
         html body header .nav-menu .add-menu:hover .drop-down {
           transform: scaleY(1); }
       html body header .nav-menu .drop-down {
         width: 200px;
         position: absolute;
-        top: 100%;
+        top: 45%;
         left: 0;
         padding: 0;
         list-style: none;
@@ -151,7 +159,11 @@ html {
         font-size: 1.5em; }
         html body header .nav-menu .social-box .social-btn {
           color: white;
-          text-decoration: none; }
+          text-decoration: none;
+          transition-duration: 0.1s;
+          transition-timing-function: linear; }
+          html body header .nav-menu .social-box .social-btn:hover {
+            text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); }
 
 @font-face {
   html body main {
