@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import {ContentBlock} from "./ContentBlock";
 
 export class ContentLine extends Component {
     render() {

@@ -29,8 +29,8 @@ export class Gallery extends Component {
                     ♠
                 </span>
                 <div className="container" style={{transform: "translateX(" + this.state.currentItem * -100 + "%)"}}>
-                    <img src="./img/img-1.jpeg"/>
-                    <img src="./img/img-2.jpg"/>
+                    <img alt="img" src="./img/img-1.jpeg"/>
+                    <img alt="img" src="./img/img-2.jpg"/>
                 </div>
                 <div className="caption">
                     <p>{this.state.currentItem + " is current item"}</p>
