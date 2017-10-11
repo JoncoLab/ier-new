@@ -17,38 +17,38 @@ export class Main extends Component {
                                 <img alt="img" src="./img/img-3.jpg"/>
                             </div>
                             <h3>Залучення іноземних туристів</h3>
-                            <p className="date">Вересень 26, 2017</p>
+                            <p className="date">26 Вер.</p>
                         </article>
                         <article className="news-item">
                             <div className="news-image">
                                 <img alt="img" src="./img/img-2.jpg"/>
                             </div>
                             <h3>Міграційна політика Швейцарії та Європи</h3>
-                            <p className="date">Вересень 26, 2017</p>
+                            <p className="date">26 Вер.</p>
                         </article>
                         <article className="news-item">
                             <div className="news-image">
                                 <img alt="img" src="./img/img-4.jpg"/>
                             </div>
                             <h3>Меморандум про співпрацю</h3>
-                            <p className="date">Вересень 26, 2017</p>
+                            <p className="date">26 Вер.</p>
                         </article>
                     </ContentBlock>
                     <ContentBlock name="anouncements" caption="Анонси">
                         <article className="anouncements-item">
-                            <p className="date">30 ВЕР.</p>
+                            <p className="date">30 Вер.</p>
                             <p>Анонс</p>
                         </article>
                         <article className="anouncements-item">
-                            <p className="date">30 ВЕР.</p>
+                            <p className="date">30 Вер.</p>
                             <p>Анонс</p>
                         </article>
                         <article className="anouncements-item">
-                            <p className="date">30 ВЕР.</p>
+                            <p className="date">30 Вер.</p>
                             <p>Анонс</p>
                         </article>
                         <article className="anouncements-item">
-                            <p className="date">30 ВЕР.</p>
+                            <p className="date">30 Вер.</p>
                             <p>Анонс</p>
                         </article>
                     </ContentBlock>
