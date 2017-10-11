@@ -1,0 +1,9 @@
+- nav по центру
+- fb order: 1;
+- gallery caption height--;
+- body width: 70%/max-width: 946px;
+- news date format = anouncements date;
+- captions fix;
+- box shadow - розмиття++;
+- не абытурыэнту, а вступнику;\
+- gallery height * 1.5;
