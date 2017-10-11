@@ -11,8 +11,8 @@ export class DownloadBlock extends Component {
     render() {
         return (
             <div className="DownloadBlock" onClick={this.handleClick}>
-                <a href="#">Завантажити для IOS ♪</a>
-                <a href="#">Завантажити для Android ♫</a>
+                <a href="google.com">Завантажити для IOS ♪</a>
+                <a href="google.com">Завантажити для Android ♫</a>
             </div>
         );
     }

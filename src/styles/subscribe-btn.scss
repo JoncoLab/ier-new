@@ -1,0 +1,16 @@
+@import "variables.scss";
+
+#SubscribeBtn {
+  position: fixed;
+  top: 60%;
+  right: $line * 3;
+  color: $main;
+  font: {
+    family: Ico, Helvetica, sans-serif;
+    size: 5em;
+  }
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}

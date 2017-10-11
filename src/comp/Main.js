@@ -4,10 +4,6 @@ import {ContentBlock} from "./Main/ContentBlock";
 import {Gallery} from "./Main/Gallery";
 
 export class Main extends Component {
-    constructor(props) {
-        super(props);
-
-    }
     render() {
         return (
             <main>
@@ -18,21 +14,21 @@ export class Main extends Component {
                     <ContentBlock name="news" caption="Новини">
                         <article className="news-item">
                             <div className="news-image">
-                                <img src="./img/img-3.jpg"/>
+                                <img alt="img" src="./img/img-3.jpg"/>
                             </div>
                             <h3>Залучення іноземних туристів</h3>
                             <p className="date">Вересень 26, 2017</p>
                         </article>
                         <article className="news-item">
                             <div className="news-image">
-                                <img src="./img/img-2.jpg"/>
+                                <img alt="img" src="./img/img-2.jpg"/>
                             </div>
                             <h3>Міграційна політика Швейцарії та Європи</h3>
                             <p className="date">Вересень 26, 2017</p>
                         </article>
                         <article className="news-item">
                             <div className="news-image">
-                                <img src="./img/img-4.jpg"/>
+                                <img alt="img" src="./img/img-4.jpg"/>
                             </div>
                             <h3>Меморандум про співпрацю</h3>
                             <p className="date">Вересень 26, 2017</p>
@@ -61,7 +57,7 @@ export class Main extends Component {
                     <ContentBlock name="lectures" caption="Публічні лекції">
                         <article className="lectures-item">
                             <div className="lectures-image">
-                                <img src="./img/img-3.jpg"/>
+                                <img alt="img" src="./img/img-3.jpg"/>
                             </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
@@ -69,7 +65,7 @@ export class Main extends Component {
                     <ContentBlock name="art" caption="Студентська творчість">
                         <article className="art-item">
                             <div className="art-image">
-                                <img src="./img/img-3.jpg"/>
+                                <img alt="img" src="./img/img-3.jpg"/>
                             </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
@@ -77,7 +73,7 @@ export class Main extends Component {
                     <ContentBlock name="feedback" caption="Відгуки">
                         <article className="feedback-item">
                             <div className="feedback-image">
-                                <img src="./img/img-3.jpg"/>
+                                <img alt="img" src="./img/img-3.jpg"/>
                             </div>
                             <h3 className="heading">HEADING</h3>
                         </article>
