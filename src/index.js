@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import firebase from "firebase";
+import * as firebase from "firebase";
 
 const config = {
     apiKey: "AIzaSyBpHU2f2qR3QZTo5nIV1TWD0EgcJVQ_Qfg",
@@ -22,8 +22,9 @@ let root = document.getElementById('root');
 //         registerServiceWorker();
 //     },
 //     function (err) {
-//         let code = err.code;
-//         alert("Сталася помилка:\r\n" + code);
+//         let code = err.code,
+//             name = err.name;
+//         alert("Сталася помилка:\r\n" + code + "\r\n" + name);
 //     }
 // );
 

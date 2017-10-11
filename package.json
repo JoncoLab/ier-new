@@ -18,6 +18,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
+    "ready": "npm run build && firebase deploy && firebase serve",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
