@@ -14,15 +14,18 @@ const config = {
     messagingSenderId: "413710662977"
 };
 firebase.initializeApp(config);
+let root = document.getElementById('root');
 
-firebase.auth().signInAnonymously().then(
-    function (t) {
-        ReactDOM.render(<App />, document.getElementById('root'));
-        registerServiceWorker();
-    },
-    function (err) {
-        let code = err.code,
-            message = err.message;
-        alert("Сталася помилка:\r\n" + code + " - " + message);
-    }
-);
+// firebase.auth().signInAnonymously().then(
+//     function () {
+//         ReactDOM.render(<App/>, root);
+//         registerServiceWorker();
+//     },
+//     function (err) {
+//         let code = err.code;
+//         alert("Сталася помилка:\r\n" + code);
+//     }
+// );
+
+ReactDOM.render(<App/>, root);
+registerServiceWorker();
