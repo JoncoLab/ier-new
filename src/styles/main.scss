@@ -5,15 +5,20 @@
   justify-content: center;
   max-height: $line * 37.5;
   margin: 0 auto;
-  width: 80%;
+  max-width: $line * 110;
+
+  &:first-of-type {
+    min-height: $line * 50;
+    max-height: $line * 54;
+  }
 
   .gallery {
     margin: $line * 2;
-    box-shadow: $line / - 5 $line / 5 $line * 0.7 0 $main;
+    box-shadow: $line / -5 $line / 5 $line $line / 5 $main;
     flex-grow: 1;
     position: relative;
-    min-height: $line * 35;
-    max-height: $line * 37.5;
+    min-height: $line * 50;
+    max-height: $line * 54;
     overflow: hidden;
 
     .container {
@@ -111,7 +116,7 @@
     flex-grow: 1;
     margin: $line * 2;
     padding: $line * 2;
-    box-shadow: $line / - 5 $line / 5 $line * 0.7 0 $main;
+    box-shadow: $line / - 5 $line / 5 $line * 1.5 $line / 5 $main;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -119,14 +124,19 @@
     .caption {
       margin: 0;
       font: {
-        family: Helvetica, sans-serif;
+        family: OpenSans, Helvetica, sans-serif;
         weight: normal;
         size: 1.5em;
+      }
+      color: $black;
+      text: {
+        transform: uppercase;
       }
     }
 
     .content {
       h3 {
+        color: darken($grey, 5);
         font: {
           weight: normal;
           family: Helvetica, sans-serif;

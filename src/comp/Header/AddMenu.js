@@ -3,11 +3,11 @@ import {DropDown} from "./DropDown";
 
 export class AddMenu extends Component {
     items = [
-        'DropDown1',
-        'DropDown2',
-        'DropDown3',
-        'DropDown4',
-        'DropDown5'
+        'Деканат',
+        'Кафедри',
+        'Наукова діяльність',
+        'Міжнародна співпраця',
+        'Подвійні дипломи'
     ];
     render() {
         return (

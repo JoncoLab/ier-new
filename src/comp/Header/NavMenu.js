@@ -7,16 +7,18 @@ import {AddMenu} from "./AddMenu";
 
 export class NavMenu extends Component {
     studItems = [
-        'DropDown1',
-        'DropDown2',
-        'DropDown3'
+        'Напрями Підготовки',
+        'Програма вступу до магістратури',
+        'Програма вступу до аспірантури'
     ];
 
     abItems = [
-        'DropDown1',
-        'DropDown2',
-        'DropDown3',
-        'DropDown4'
+        'Розклад занять (денна форма)',
+        'Розклад занять (заочна форма)',
+        'Електронна бібліотека',
+        'Методичні вказівки',
+        'Графік заліково-екзаменаційної сесії',
+        'Графік перескладань'
     ];
     render() {
         return (
@@ -24,7 +26,7 @@ export class NavMenu extends Component {
                 <Logo/>
                 <Search/>
                 <div className="main-menu">
-                    <NavBar name="Абітурієнту" items={this.abItems}/>
+                    <NavBar name="Вступнику" items={this.abItems}/>
                     <NavBar name="Студенту" items={this.studItems}/>
                 </div>
                 <AddMenu/>
