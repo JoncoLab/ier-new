@@ -233,15 +233,14 @@ html {
           html body header .nav-menu .search-box #search.active {
             transform: translateX(0); }
       html body header .nav-menu .main-menu {
+        position: relative;
         align-self: flex-end;
         margin: 0 0 20px 0;
-        position: relative;
         width: 35%;
         display: flex;
         justify-content: space-between;
         align-items: center; }
         html body header .nav-menu .main-menu .menu-item {
-          position: relative;
           padding: 5px 0; }
           html body header .nav-menu .main-menu .menu-item h2 {
             margin: 0;
@@ -279,14 +278,14 @@ html {
         html body header .nav-menu .add-menu:hover .drop-down {
           transform: scaleY(1); }
       html body header .nav-menu .drop-down {
-        width: 200px;
+        width: 70%;
         position: absolute;
-        top: 45%;
+        top: 70%;
         left: 0;
         padding: 0;
         list-style: none;
         color: #01487e;
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: bold;
         font-family: Helvetica;
         box-shadow: -3px 3px 7px 0 #01487e;
@@ -294,14 +293,19 @@ html {
         transition-timing-function: linear;
         transform: scaleY(0);
         transform-origin: top; }
+        html body header .nav-menu .drop-down:nth-of-type(2) {
+          right: 0; }
         html body header .nav-menu .drop-down li {
-          padding: 10px 20px;
+          padding: 10px 5px 10px 10px;
           display: flex;
           justify-content: space-between;
           align-items: center;
           transition-duration: 0.2s;
           transition-timing-function: linear;
           background-color: white;
+          font-family: OpenSans, Helvetica, sans-serif;
+          font-size: 0.9em;
+          text-transform: uppercase;
           cursor: pointer; }
           html body header .nav-menu .drop-down li span {
             font-family: Ico, Helvetica, sans-serif;
@@ -367,8 +371,8 @@ html {
         transition-duration: 0.2s;
         transition-timing-function: linear; }
         html body main .content-line .gallery .container img {
-          width: 100%;
-          display: inline-block; }
+          min-width: 100%;
+          width: 100%; }
       html body main .content-line .gallery .arrow {
         z-index: 100;
         display: block;
@@ -392,21 +396,19 @@ html {
         bottom: 0;
         width: 100%;
         background-color: rgba(85, 169, 203, 0.7);
-        transform: translateY(100%);
         transition-duration: 0.2s;
         transition-timing-function: linear;
-        font-weight: normal;
-        text-transform: uppercase; }
+        font-weight: normal; }
         html body main .content-line .gallery .caption p {
+          font-family: Helvetica, sans-serif;
+          font-size: 1.1em;
           margin: 0;
-          padding: 10px 20px; }
+          padding: 10px 10px 5px 20px; }
         html body main .content-line .gallery .caption .counter {
           text-align: right;
           padding: 5px; }
           html body main .content-line .gallery .caption .counter .counter-point {
             cursor: pointer; }
-      html body main .content-line .gallery:hover .caption {
-        transform: translateY(0); }
       html body main .content-line .gallery:hover .arrow {
         transform: translateX(0); }
     html body main .content-line .content-block {
@@ -451,7 +453,7 @@ html {
           html body main .content-line .content-block.news .content .news-item {
             flex-grow: 1;
             flex-basis: 30%;
-            justify-content: center;
+            justify-content: space-between;
             padding: 10px;
             display: flex;
             flex-direction: column; }
@@ -470,7 +472,8 @@ html {
               padding: 10px 0;
               position: relative;
               font-family: OpenSans, Helvetica, sans-serif;
-              font-weight: bold; }
+              font-weight: bold;
+              font-size: 0.9em; }
               html body main .content-line .content-block.news .content .news-item h3:after {
                 position: absolute;
                 bottom: 0;
@@ -492,14 +495,17 @@ html {
           html body main .content-line .content-block.anouncements .content .anouncements-item {
             display: flex; }
             html body main .content-line .content-block.anouncements .content .anouncements-item p {
+              color: #757575;
               margin: 10px 0;
               padding: 5px 15px; }
               html body main .content-line .content-block.anouncements .content .anouncements-item p.date {
-                border-right: 2px solid #55a9cb; }
+                font-family: OpenSans, Helvetica, sans-serif;
+                font-size: 0.9em;
+                border-right: 2px solid #757575; }
       html body main .content-line .content-block.lectures, html body main .content-line .content-block.art, html body main .content-line .content-block.feedback {
         flex-basis: 30%; }
         html body main .content-line .content-block.lectures .caption, html body main .content-line .content-block.art .caption, html body main .content-line .content-block.feedback .caption {
-          font-size: 1.25em; }
+          font-size: 1.1em; }
         html body main .content-line .content-block.lectures .content, html body main .content-line .content-block.art .content, html body main .content-line .content-block.feedback .content {
           display: flex; }
           html body main .content-line .content-block.lectures .content [class$="item"], html body main .content-line .content-block.art .content [class$="item"], html body main .content-line .content-block.feedback .content [class$="item"] {

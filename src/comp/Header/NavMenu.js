@@ -6,13 +6,13 @@ import { SocialButtons } from "./SocialButtons";
 import {AddMenu} from "./AddMenu";
 
 export class NavMenu extends Component {
-    studItems = [
+    abItems = [
         'Напрями Підготовки',
         'Програма вступу до магістратури',
         'Програма вступу до аспірантури'
     ];
 
-    abItems = [
+    studItems = [
         'Розклад занять (денна форма)',
         'Розклад занять (заочна форма)',
         'Електронна бібліотека',
