@@ -3,18 +3,17 @@
 .content-line {
   display: flex;
   justify-content: center;
-  max-height: $line * 37.5;
   margin: 0 auto;
-  max-width: $line * 110;
+  width: $line * 110;
+  max-width: 75%;
 
-  &:first-of-type {
-    min-height: $line * 50;
-    max-height: $line * 54;
+  &:not(:first-of-type) {
+    max-height: $line * 37.5;
   }
 
   .gallery {
     margin: $line * 2;
-    box-shadow: $line / -5 $line / 5 $line * 1.5 0 $main;
+    box-shadow: $line / -5 $line / 5 $line / 1.5 0 $main;
     flex-grow: 1;
     position: relative;
     min-height: $line * 50;
@@ -24,17 +23,17 @@
     .container {
       width: 100%;
       height: 100%;
-      background: black;
-      display: flex;
-      align-items: center;
       transition: {
         duration: $time;
         timing-function: linear;
       }
+      display: flex;
 
       img {
+        display: inline-block;
+        object-fit: cover;
         min-width: 100%;
-        width: 100%;
+        filter: saturate(3);
       }
     }
 
@@ -93,10 +92,21 @@
 
       .counter {
         text-align: right;
-        padding: $line / 2;
 
         .counter-point {
           cursor: pointer;
+          font: {
+            size: 0.5em;
+          }
+          letter-spacing: 1em;
+          border: $line / 5 solid white;
+          margin: $line / 2;
+
+          &.active {
+            background: {
+              color: white;
+            }
+          }
         }
       }
     }
@@ -117,7 +127,7 @@
     flex-grow: 1;
     margin: $line * 2;
     padding: $line * 2;
-    box-shadow: $line / - 5 $line / 5 $line * 1.5 0 $main;
+    box-shadow: $line / - 5 $line / 5 $line / 1.5 0 $main;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -188,32 +198,46 @@
           flex-direction: column;
 
           .news-image {
-            flex-grow: 1;
-            max-height: 60%;
+            flex-basis: 60%;
+            min-height: 60%;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
 
             img {
-              display: inline-block;
-              max-width: 100%;
-              flex-grow: 1;
+              min-height: 100%;
+              max-width: 110%;
+              object-fit: cover;
             }
           }
 
           h3 {
-            margin: 0;
-            padding: $line 0;
-            position: relative;
+            margin: $line / 2 0 0;
+            padding: 0;
             font: {
               family: OpenSans, Helvetica, sans-serif;
-              weight: bold;
-              size: 0.9em;
+              weight: normal;
+              size: 0.85em;
+            }
+            flex-basis: 29%;
+            min-height: 29%;
+            flex-grow: 1;
+            overflow: scroll;
+            @include noScroll();
+          }
+
+          .date {
+            flex-shrink: 1;
+            max-height: 15%;
+            position: relative;
+            color: $grey;
+            padding: $line / 2 0 0;
+            font: {
+              family: Helvetica, sans-serif;
+              size: 0.75em;
             }
 
             &:after {
               position: absolute;
-              bottom: 0;
+              bottom: 100%;
               display: block;
               content: "";
               width: 40%;
@@ -221,15 +245,6 @@
               background: {
                 color: $grey;
               }
-            }
-          }
-
-          .date {
-            color: $grey;
-            margin: $line 0 0;
-            font: {
-              family: Helvetica, sans-serif;
-              size: 0.75em;
             }
           }
         }

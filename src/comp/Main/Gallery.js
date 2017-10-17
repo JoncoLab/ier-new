@@ -30,7 +30,6 @@ export class Gallery extends Component {
                 </span>
                 <div className="container" style={{transform: "translateX(" + this.state.currentItem * -100 + "%)"}}>
                     <img alt="igm" src="./img/hot-new-miss.jpg"/>
-                    <img alt="img" src="./img/img-6.jpg"/>
                     <img alt="img" src="./img/img-1.jpeg"/>
                     <img alt="img" src="./img/img-2.jpg"/>
                 </div>
@@ -40,8 +39,11 @@ export class Gallery extends Component {
                         Міс Факультету Міжнародних Економічних Відносин 2017
                     </p>
                     <div className="counter">
-                        <span className="counter-point active">☻</span>
-                        <span className="counter-point">☺</span>
+                        <span className="counter-point"> </span>
+                        <span className="counter-point active"> </span>
+                        <span className="counter-point"> </span>
+                        <span className="counter-point"> </span>
+                        <span className="counter-point"> </span>
                     </div>
                 </div>
                 <span className="arrow right" onClick={this.next}>

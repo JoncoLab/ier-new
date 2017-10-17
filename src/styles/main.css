@@ -13,15 +13,14 @@
 .content-line {
   display: flex;
   justify-content: center;
-  max-height: 375px;
   margin: 0 auto;
-  max-width: 1100px; }
-  .content-line:first-of-type {
-    min-height: 500px;
-    max-height: 540px; }
+  width: 1100px;
+  max-width: 75%; }
+  .content-line:not(:first-of-type) {
+    max-height: 375px; }
   .content-line .gallery {
     margin: 20px;
-    box-shadow: -2px 2px 15px 0 #01487e;
+    box-shadow: -2px 2px 6.66667px 0 #01487e;
     flex-grow: 1;
     position: relative;
     min-height: 500px;
@@ -30,14 +29,14 @@
     .content-line .gallery .container {
       width: 100%;
       height: 100%;
-      background: black;
-      display: flex;
-      align-items: center;
       transition-duration: 0.2s;
-      transition-timing-function: linear; }
+      transition-timing-function: linear;
+      display: flex; }
       .content-line .gallery .container img {
+        display: inline-block;
+        object-fit: cover;
         min-width: 100%;
-        width: 100%; }
+        filter: saturate(3); }
     .content-line .gallery .arrow {
       z-index: 100;
       display: block;
@@ -70,17 +69,22 @@
         margin: 0;
         padding: 10px 10px 5px 20px; }
       .content-line .gallery .caption .counter {
-        text-align: right;
-        padding: 5px; }
+        text-align: right; }
         .content-line .gallery .caption .counter .counter-point {
-          cursor: pointer; }
+          cursor: pointer;
+          font-size: 0.5em;
+          letter-spacing: 1em;
+          border: 2px solid white;
+          margin: 5px; }
+          .content-line .gallery .caption .counter .counter-point.active {
+            background-color: white; }
     .content-line .gallery:hover .arrow {
       transform: translateX(0); }
   .content-line .content-block {
     flex-grow: 1;
     margin: 20px;
     padding: 20px;
-    box-shadow: -2px 2px 15px 0 #01487e;
+    box-shadow: -2px 2px 6.66667px 0 #01487e;
     display: flex;
     flex-direction: column;
     position: relative; }
@@ -89,7 +93,7 @@
       font-family: OpenSans, Helvetica, sans-serif;
       font-weight: normal;
       font-size: 1.5em;
-      color: #212121;
+      color: #1a2e64;
       text-transform: uppercase; }
     .content-line .content-block .content h3 {
       color: #686868;
@@ -123,35 +127,42 @@
           display: flex;
           flex-direction: column; }
           .content-line .content-block.news .content .news-item .news-image {
-            flex-grow: 1;
-            max-height: 60%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column; }
+            flex-basis: 60%;
+            min-height: 60%;
+            overflow: hidden; }
             .content-line .content-block.news .content .news-item .news-image img {
-              display: inline-block;
-              max-width: 100%;
-              flex-grow: 1; }
+              min-height: 100%;
+              max-width: 110%;
+              object-fit: cover; }
           .content-line .content-block.news .content .news-item h3 {
-            margin: 0;
-            padding: 10px 0;
-            position: relative;
+            margin: 5px 0 0;
+            padding: 0;
             font-family: OpenSans, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 0.9em; }
-            .content-line .content-block.news .content .news-item h3:after {
+            font-weight: normal;
+            font-size: 0.85em;
+            flex-basis: 29%;
+            min-height: 29%;
+            flex-grow: 1;
+            overflow: scroll; }
+            .content-line .content-block.news .content .news-item h3::-webkit-scrollbar {
+              width: 0;
+              height: 0; }
+          .content-line .content-block.news .content .news-item .date {
+            flex-shrink: 1;
+            max-height: 15%;
+            position: relative;
+            color: #757575;
+            padding: 5px 0 0;
+            font-family: Helvetica, sans-serif;
+            font-size: 0.75em; }
+            .content-line .content-block.news .content .news-item .date:after {
               position: absolute;
-              bottom: 0;
+              bottom: 100%;
               display: block;
               content: "";
               width: 40%;
               height: 2px;
               background-color: #757575; }
-          .content-line .content-block.news .content .news-item .date {
-            color: #757575;
-            margin: 10px 0 0;
-            font-family: Helvetica, sans-serif;
-            font-size: 0.75em; }
     .content-line .content-block.anouncements {
       flex-basis: 25%; }
       .content-line .content-block.anouncements .content {

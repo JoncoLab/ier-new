@@ -1,15 +1,17 @@
 @import "variables.scss";
 
 .footer-content {
-  width: 80%;
+  width: $line * 110;
+  max-width: 75%;
   height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  overflow: hidden;
 
   #FeedbackForm {
-    width: 30%;
+    margin: 0 $line * 2 0;
+    flex-basis: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -35,7 +37,7 @@
       text: {
         align: center;
       }
-      box-shadow: 0 $line / 2 $line * 3 0 $black;
+      box-shadow: 0 $line / 2 $line * 2 0 $black;
       z-index: 1;
     }
 
@@ -110,7 +112,8 @@
   }
 
   .footer-add {
-    width: 65%;
+    flex-basis: 65%;
+    margin: 0 $line * 2 0 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -119,7 +122,7 @@
 
     #ContactsBtn,
     #DownloadBtn {
-      width: 45%;
+      flex-grow: 1;
       padding: $line * 1.5 0;
       background: {
         color: $blue;
@@ -154,6 +157,7 @@
 
     #DownloadBtn {
       align-self: flex-end;
+      margin: 0 0 0 $line * 2;
     }
 
     .GoogleMaps {

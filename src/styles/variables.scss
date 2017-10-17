@@ -4,7 +4,7 @@ $time: 0.2s;
 $main: #01487e;
 $blue: #55a9cb;
 $lightBlue: #55a9cb;
-$black:   #212121;
+$black: #1a2e64;
 $grey: #757575;
 $lightGrey: #BDBDBD;
 
@@ -21,4 +21,35 @@ $lightGrey: #BDBDBD;
 @font-face {
   font-family: OpenSans;
   src: url('./fonts/OpenSansRegular.ttf');
+}
+
+@mixin noScroll() {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@mixin scroll() {
+  &::-webkit-scrollbar {
+    width: 0;
+
+    &-track {
+
+      &-piece {
+
+      }
+    }
+
+    &-thumb {
+
+      &:hover {
+
+      }
+
+      &:active {
+
+      }
+    }
+  }
 }

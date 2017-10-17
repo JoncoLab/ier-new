@@ -21,7 +21,7 @@ html {
 
     header {
       width: 100%;
-      height: $line * 12;
+      max-height: $line * 20;
       background: {
         color: $main;
       }

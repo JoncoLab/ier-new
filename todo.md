@@ -1,9 +1,9 @@
 - nav по центру
 - fb order: 1;
 - gallery caption height--;
-- body width: 70%/max-width: 946px;
-- news date format = anouncements date;
-- captions fix;
+- b
+- captions fix;ody width: 70%/max-width: 946px;
+               - news date format = anouncements date;
 - box shadow - розмиття++;
 - не абытурыэнту, а вступнику;\
 - gallery height * 1.5;
@@ -31,10 +31,25 @@
     подвійні дипломи
 }
 
-- galleryArrows
 - googleMaps
 - додати новини
-- тінь
-- Caption color $main
-- повернути дату новинам
-- убрати болд новинам ВСЮДИ
+
+0) Квадратики на галереї
+0) Обробити фото
+0) captions color:blue;
+0) h3 font-weight: normal;
+5) Add news:
+    - Miss;
+    - Translator's day;
+    - Курси гыдыв-перекладачыв;
+    - 500-и;
+0) Вирівняти футер по контенту;
+0) box-shadow--;
+
+1) ВНЕСИ НОВИНИ!!!
+2) Відступи у квадратиків
+3) Знову зробити карту;
+4) Публічні лекції - Студентське життя;
+5) Відгуки - Історії успіху;
+6) Студентська творчість - Чому ФМЕВ;
+7) Забрати scrollbar;
