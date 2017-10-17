@@ -54,7 +54,12 @@ export class Main extends Component {
                     </ContentBlock>
                 </ContentLine>
                 <ContentLine>
-                    <ContentBlock name="lectures" caption="Публічні лекції">
+                    <ContentBlock name="why" caption="Чому ФМЕВ">
+
+                    </ContentBlock>
+                </ContentLine>
+                <ContentLine>
+                    <ContentBlock name="lectures" caption="Публічне життя">
                         <article className="lectures-item">
                             <div className="lectures-image">
                                 <img alt="img" src="./img/img-3.jpg"/>
@@ -62,15 +67,7 @@ export class Main extends Component {
                             <h3 className="heading">HEADING</h3>
                         </article>
                     </ContentBlock>
-                    <ContentBlock name="art" caption="Студентська творчість">
-                        <article className="art-item">
-                            <div className="art-image">
-                                <img alt="img" src="./img/img-3.jpg"/>
-                            </div>
-                            <h3 className="heading">HEADING</h3>
-                        </article>
-                    </ContentBlock>
-                    <ContentBlock name="feedback" caption="Відгуки">
+                    <ContentBlock name="feedback" caption="Історії успіху">
                         <article className="feedback-item">
                             <div className="feedback-image">
                                 <img alt="img" src="./img/img-3.jpg"/>

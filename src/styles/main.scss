@@ -8,7 +8,8 @@
   max-width: 75%;
 
   &:not(:first-of-type) {
-    max-height: $line * 37.5;
+    min-height: $line * 37.5;
+    max-height: $line * 50;
   }
 
   .gallery {
@@ -33,7 +34,7 @@
         display: inline-block;
         object-fit: cover;
         min-width: 100%;
-        filter: saturate(3);
+        filter: saturate(2);
       }
     }
 
@@ -92,6 +93,7 @@
 
       .counter {
         text-align: right;
+        margin: 0 $line / 2 $line / 2 0;
 
         .counter-point {
           cursor: pointer;
@@ -279,7 +281,6 @@
     }
 
     &.lectures,
-    &.art,
     &.feedback {
       flex-basis: 30%;
 
@@ -288,6 +289,32 @@
           size: 1.1em;
         }
       }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        [class$="item"] {
+          justify-content: space-between;
+          padding: $line;
+          display: flex;
+          flex-direction: column;
+
+          [class$="image"] {
+            overflow: hidden;
+            width: 100%;
+
+            img {
+              object-fit: cover;
+              max-width: 110%;
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &.why {
 
       .content {
         display: flex;

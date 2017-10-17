@@ -17,7 +17,8 @@
   width: 1100px;
   max-width: 75%; }
   .content-line:not(:first-of-type) {
-    max-height: 375px; }
+    min-height: 375px;
+    max-height: 500px; }
   .content-line .gallery {
     margin: 20px;
     box-shadow: -2px 2px 6.66667px 0 #01487e;
@@ -36,7 +37,7 @@
         display: inline-block;
         object-fit: cover;
         min-width: 100%;
-        filter: saturate(3); }
+        filter: saturate(2); }
     .content-line .gallery .arrow {
       z-index: 100;
       display: block;
@@ -69,7 +70,8 @@
         margin: 0;
         padding: 10px 10px 5px 20px; }
       .content-line .gallery .caption .counter {
-        text-align: right; }
+        text-align: right;
+        margin: 0 5px 5px 0; }
         .content-line .gallery .caption .counter .counter-point {
           cursor: pointer;
           font-size: 0.5em;
@@ -178,23 +180,38 @@
               font-family: OpenSans, Helvetica, sans-serif;
               font-size: 0.9em;
               border-right: 2px solid #757575; }
-    .content-line .content-block.lectures, .content-line .content-block.art, .content-line .content-block.feedback {
+    .content-line .content-block.lectures, .content-line .content-block.feedback {
       flex-basis: 30%; }
-      .content-line .content-block.lectures .caption, .content-line .content-block.art .caption, .content-line .content-block.feedback .caption {
+      .content-line .content-block.lectures .caption, .content-line .content-block.feedback .caption {
         font-size: 1.1em; }
-      .content-line .content-block.lectures .content, .content-line .content-block.art .content, .content-line .content-block.feedback .content {
-        display: flex; }
-        .content-line .content-block.lectures .content [class$="item"], .content-line .content-block.art .content [class$="item"], .content-line .content-block.feedback .content [class$="item"] {
+      .content-line .content-block.lectures .content, .content-line .content-block.feedback .content {
+        display: flex;
+        flex-direction: column; }
+        .content-line .content-block.lectures .content [class$="item"], .content-line .content-block.feedback .content [class$="item"] {
           justify-content: space-between;
           padding: 10px;
           display: flex;
           flex-direction: column; }
-          .content-line .content-block.lectures .content [class$="item"] [class$="image"], .content-line .content-block.art .content [class$="item"] [class$="image"], .content-line .content-block.feedback .content [class$="item"] [class$="image"] {
-            flex-grow: 1;
+          .content-line .content-block.lectures .content [class$="item"] [class$="image"], .content-line .content-block.feedback .content [class$="item"] [class$="image"] {
             overflow: hidden;
-            display: flex;
-            flex-direction: column; }
-            .content-line .content-block.lectures .content [class$="item"] [class$="image"] img, .content-line .content-block.art .content [class$="item"] [class$="image"] img, .content-line .content-block.feedback .content [class$="item"] [class$="image"] img {
-              display: inline-block;
-              max-width: 100%;
-              flex-grow: 1; }
+            width: 100%; }
+            .content-line .content-block.lectures .content [class$="item"] [class$="image"] img, .content-line .content-block.feedback .content [class$="item"] [class$="image"] img {
+              object-fit: cover;
+              max-width: 110%;
+              min-width: 100%; }
+    .content-line .content-block.why .content {
+      display: flex; }
+      .content-line .content-block.why .content [class$="item"] {
+        justify-content: space-between;
+        padding: 10px;
+        display: flex;
+        flex-direction: column; }
+        .content-line .content-block.why .content [class$="item"] [class$="image"] {
+          flex-grow: 1;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column; }
+          .content-line .content-block.why .content [class$="item"] [class$="image"] img {
+            display: inline-block;
+            max-width: 100%;
+            flex-grow: 1; }

@@ -27,6 +27,3 @@ firebase.auth().signInAnonymously().then(
         alert("Сталася помилка:\r\n" + code + "\r\n" + name);
     }
 );
-
-ReactDOM.render(<App/>, root);
-registerServiceWorker();
