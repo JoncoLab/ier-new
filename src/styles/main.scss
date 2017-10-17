@@ -9,7 +9,7 @@
 
   &:not(:first-of-type) {
     min-height: $line * 37.5;
-    max-height: $line * 50;
+    max-height: $line * 45;
   }
 
   .gallery {
@@ -93,7 +93,7 @@
 
       .counter {
         text-align: right;
-        margin: 0 $line / 2 $line / 2 0;
+        margin: 0 $line $line 0;
 
         .counter-point {
           cursor: pointer;
@@ -102,7 +102,7 @@
           }
           letter-spacing: 1em;
           border: $line / 5 solid white;
-          margin: $line / 2;
+          margin: $line * 0.7;
 
           &.active {
             background: {
@@ -139,9 +139,9 @@
       font: {
         family: OpenSans, Helvetica, sans-serif;
         weight: normal;
-        size: 1.5em;
+        size: 1.45em;
       }
-      color: $black;
+      color: $main;
       text: {
         transform: uppercase;
       }
@@ -194,10 +194,10 @@
         .news-item {
           flex-grow: 1;
           flex-basis: 30%;
-          justify-content: space-between;
           padding: $line;
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
 
           .news-image {
             flex-basis: 60%;
@@ -227,6 +227,7 @@
           }
 
           .date {
+            margin: 0 0 $line * 3 0;
             flex-shrink: 1;
             max-height: 15%;
             position: relative;
@@ -234,7 +235,7 @@
             padding: $line / 2 0 0;
             font: {
               family: Helvetica, sans-serif;
-              size: 0.75em;
+              size: 0.8em;
             }
 
             &:after {
@@ -243,7 +244,7 @@
               display: block;
               content: "";
               width: 40%;
-              height: $line / 5;
+              height: $line * 0.2;
               background: {
                 color: $grey;
               }
@@ -259,6 +260,8 @@
       .content {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        min-height: 80%;
 
         .anouncements-item {
           display: flex;
@@ -271,7 +274,7 @@
             &.date {
               font: {
                 family: OpenSans, Helvetica, sans-serif;
-                size: 0.9em;
+                size: 0.8em;
               }
               border-right: $line / 5 solid $grey;
             }
@@ -307,6 +310,7 @@
             img {
               object-fit: cover;
               max-width: 110%;
+              width: 100%;
               min-width: 100%;
             }
           }
@@ -332,7 +336,7 @@
             flex-direction: column;
 
             img {
-              display: inline-block;
+              width: 100%;
               max-width: 100%;
               flex-grow: 1;
             }

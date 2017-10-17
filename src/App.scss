@@ -14,6 +14,7 @@ html {
   }
 
   body {
+    @include noScroll;
 
     @import "styles/contacts-block.scss";
     @import "styles/download-block.scss";
