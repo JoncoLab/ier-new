@@ -20,8 +20,8 @@
   z-index: -1;
 
   a {
-    width: 25%;
-    padding: $line * 2 0;
+    min-width: 25%;
+    padding: $line * 2 $line / 2;
     background: {
       color: $blue;
     }
