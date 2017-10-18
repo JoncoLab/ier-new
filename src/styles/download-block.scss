@@ -21,14 +21,14 @@
 
   a {
     min-width: 25%;
-    padding: $line * 2 $line / 2;
+    padding: $line * 2 $line;
     background: {
       color: $blue;
     }
     color: white;
     font: {
       family: Ico, OpenSans, sans-serif;
-      size: 1.2em;
+      size: 1.1em;
       weight: bold;
     }
     cursor: pointer;

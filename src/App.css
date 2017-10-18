@@ -19,6 +19,9 @@ body {
 
 html {
   font-size: 20px; }
+  html body::-webkit-scrollbar {
+    width: 0;
+    height: 0; }
 
 @font-face {
   html body {
@@ -50,10 +53,13 @@ html {
     opacity: 0;
     z-index: -1; }
     html body .contacts-block table {
-      width: 50%;
+      min-width: 55%;
+      width: 60%;
+      max-width: 70%;
       background-color: #55a9cb;
       border-collapse: collapse; }
       html body .contacts-block table caption {
+        position: relative;
         padding: 10px 20px;
         background-color: #55a9cb;
         color: white;
@@ -62,12 +68,14 @@ html {
         font-weight: bold;
         text-align: left; }
         html body .contacts-block table caption #contacts-close-btn {
+          position: absolute;
+          top: 5px;
+          right: 10px;
           color: white;
           font-family: OpenSans;
           font-size: 1.3em;
           font-weight: bold;
           cursor: pointer;
-          margin: 0 0 0 30%;
           border: none;
           outline: none;
           background: none; }
@@ -75,7 +83,7 @@ html {
         background-color: white; }
         html body .contacts-block table tr th,
         html body .contacts-block table tr td {
-          padding: 5px 20px;
+          padding: 5px 15px;
           text-align: left;
           color: #1a2e64;
           font-family: Helvetica, sans-serif;
@@ -120,12 +128,12 @@ html {
     opacity: 0;
     z-index: -1; }
     html body .DownloadBlock a {
-      width: 25%;
-      padding: 20px 0;
+      min-width: 25%;
+      padding: 20px 10px;
       background-color: #55a9cb;
       color: white;
       font-family: Ico, OpenSans, sans-serif;
-      font-size: 1.2em;
+      font-size: 1.1em;
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
@@ -356,7 +364,7 @@ html {
     max-width: 75%; }
     html body main .content-line:not(:first-of-type) {
       min-height: 375px;
-      max-height: 500px; }
+      max-height: 450px; }
     html body main .content-line .gallery {
       margin: 20px;
       box-shadow: -2px 2px 6.66667px 0 #01487e;
@@ -409,13 +417,13 @@ html {
           padding: 10px 10px 5px 20px; }
         html body main .content-line .gallery .caption .counter {
           text-align: right;
-          margin: 0 5px 5px 0; }
+          margin: 0 10px 10px 0; }
           html body main .content-line .gallery .caption .counter .counter-point {
             cursor: pointer;
             font-size: 0.5em;
             letter-spacing: 1em;
             border: 2px solid white;
-            margin: 5px; }
+            margin: 7px; }
             html body main .content-line .gallery .caption .counter .counter-point.active {
               background-color: white; }
       html body main .content-line .gallery:hover .arrow {
@@ -432,8 +440,8 @@ html {
         margin: 0;
         font-family: OpenSans, Helvetica, sans-serif;
         font-weight: normal;
-        font-size: 1.5em;
-        color: #1a2e64;
+        font-size: 1.45em;
+        color: #01487e;
         text-transform: uppercase; }
       html body main .content-line .content-block .content h3 {
         color: #686868;
@@ -462,10 +470,10 @@ html {
           html body main .content-line .content-block.news .content .news-item {
             flex-grow: 1;
             flex-basis: 30%;
-            justify-content: space-between;
             padding: 10px;
             display: flex;
-            flex-direction: column; }
+            flex-direction: column;
+            justify-content: space-between; }
             html body main .content-line .content-block.news .content .news-item .news-image {
               flex-basis: 60%;
               min-height: 60%;
@@ -488,13 +496,14 @@ html {
                 width: 0;
                 height: 0; }
             html body main .content-line .content-block.news .content .news-item .date {
+              margin: 0 0 30px 0;
               flex-shrink: 1;
               max-height: 15%;
               position: relative;
               color: #757575;
               padding: 5px 0 0;
               font-family: Helvetica, sans-serif;
-              font-size: 0.75em; }
+              font-size: 0.8em; }
               html body main .content-line .content-block.news .content .news-item .date:after {
                 position: absolute;
                 bottom: 100%;
@@ -507,7 +516,9 @@ html {
         flex-basis: 25%; }
         html body main .content-line .content-block.anouncements .content {
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 80%; }
           html body main .content-line .content-block.anouncements .content .anouncements-item {
             display: flex; }
             html body main .content-line .content-block.anouncements .content .anouncements-item p {
@@ -516,7 +527,7 @@ html {
               padding: 5px 15px; }
               html body main .content-line .content-block.anouncements .content .anouncements-item p.date {
                 font-family: OpenSans, Helvetica, sans-serif;
-                font-size: 0.9em;
+                font-size: 0.8em;
                 border-right: 2px solid #757575; }
       html body main .content-line .content-block.lectures, html body main .content-line .content-block.feedback {
         flex-basis: 30%; }
@@ -536,6 +547,7 @@ html {
               html body main .content-line .content-block.lectures .content [class$="item"] [class$="image"] img, html body main .content-line .content-block.feedback .content [class$="item"] [class$="image"] img {
                 object-fit: cover;
                 max-width: 110%;
+                width: 100%;
                 min-width: 100%; }
       html body main .content-line .content-block.why .content {
         display: flex; }
@@ -550,7 +562,7 @@ html {
             display: flex;
             flex-direction: column; }
             html body main .content-line .content-block.why .content [class$="item"] [class$="image"] img {
-              display: inline-block;
+              width: 100%;
               max-width: 100%;
               flex-grow: 1; }
   html body footer {
