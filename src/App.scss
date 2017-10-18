@@ -54,9 +54,10 @@ html {
       background: {
         color: white;
       }
-      //transition: {
-      //  duration: $time * 2;
-      //}
+      transition: {
+        duration: $time * 2;
+      }
+      z-index: 1000;
 
       svg {
         stroke: $main;

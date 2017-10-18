@@ -21,9 +21,12 @@ class App extends Component {
     }
 
     appLoad() {
-        this.setState({
-            ready: true
-        })
+        let app = this;
+        setTimeout(function () {
+            app.setState({
+                ready: true
+            });
+        }, 2000);
     }
 
   render() {
@@ -35,7 +38,7 @@ class App extends Component {
           <ContactsBlock/>
           <DownloadBlock/>
           <SubscribeBtn/>
-          <Preloader/>
+          <Preloader state={this.state.ready}/>
       </div>
     );
   }

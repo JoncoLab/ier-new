@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as $ from "jquery";
-import firebase from "firebase";
+import * as firebase from "firebase";
 
 export class Gallery extends Component {
     constructor(props) {
@@ -9,22 +9,38 @@ export class Gallery extends Component {
             currentItem: 0
         };
 
+        this.getCaptions = this.getCaptions.bind(this);
         this.switchItem = this.switchItem.bind(this);
-        this.pointSwitcher = this.pointSwitcher.bind(this);
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this);
+        this.getCaptions();
     }
-    captions = [
-        "День перекладача",
-        "Ще якась новина, я забув, сорі",
-        "Міс Факультету Міжнародних Економічних Відносин 2017",
-        "Ще якась новина, яку я теж забув",
-        "Та новина, де фотка з грошима"
-    ];
+    captions = [];
+    images = [];
+    spans = [];
+    getCaptions() {
+        const gallery = this;
+        firebase.database(firebase.app("ier-new"))
+            .ref("hot-news")
+            .once("value")
+            .then(function (dataSnapshot) {
+                dataSnapshot.forEach(function (newsSnapshot) {
+                    let caption = newsSnapshot.child("caption").val(),
+                        image = newsSnapshot.child("image").val(),
+                        span = newsSnapshot.key.substr(newsSnapshot.key.length - 1);
+                    gallery.captions.push(caption);
+                    gallery.images.push(image);
+                    gallery.spans.push(span);
+                });
+                gallery.setState({
+                    currentItem: gallery.state.currentItem
+                });
+            });
+    }
     switchItem(item) {
         let target = item >= 0 ?
-            (item <= 4 ?
-                item : 4) :
+            (item <= 3 ?
+                item : 3) :
             0;
         this.setState({
             currentItem: target
@@ -32,16 +48,12 @@ export class Gallery extends Component {
         const counters = $('.gallery .caption .counter .counter-point');
         counters.removeClass("active");
         $(counters[target]).addClass("active");
-        alert(firebase.storage(firebase.app("ier-new")).ref("gallery/"));
     }
     next() {
         this.switchItem(this.state.currentItem + 1);
     }
     previous() {
         this.switchItem(this.state.currentItem - 1);
-    }
-    pointSwitcher(item) {
-        this.switchItem(item);
     }
     render() {
         return (
@@ -50,11 +62,11 @@ export class Gallery extends Component {
                     ♠
                 </span>
                 <div className="container" style={{transform: "translateX(" + this.state.currentItem * -100 + "%)"}}>
-                    <img alt="img" src="./img/img-1.jpeg"/>
-                    <img alt="img" src="./img/img-1.jpeg"/>
-                    <img alt="igm" src="./img/hot-new-miss.jpg"/>
-                    <img alt="img" src="./img/img-1.jpeg"/>
-                    <img alt="img" src="./img/img-1.jpeg"/>
+                    {
+                        this.images.map((src) =>
+                            <img src={src}/>
+                        )
+                    }
                 </div>
                 <div className="caption">
                     <p>
@@ -63,11 +75,11 @@ export class Gallery extends Component {
                         }
                     </p>
                     <div className="counter">
-                        <span onClick={(e) => this.switchItem(0)} className="counter-point active"> </span>
-                        <span onClick={(e) => this.switchItem(1)} className="counter-point"> </span>
-                        <span onClick={(e) => this.switchItem(2)} className="counter-point"> </span>
-                        <span onClick={(e) => this.switchItem(3)} className="counter-point"> </span>
-                        <span onClick={(e) => this.switchItem(4)} className="counter-point"> </span>
+                        {
+                            this.spans.map((i) =>
+                                <span onClick={(e) => this.switchItem(i - 1)} className={"counter-point" + (i === 1 ? " active" : "")}> </span>
+                            )
+                        }
                     </div>
                 </div>
                 <span className="arrow right" onClick={this.next}>
