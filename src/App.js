@@ -6,17 +6,36 @@ import { Footer } from "./comp/Footer";
 import { ContactsBlock } from "./comp/Footer/Contacts/ContactsBlock";
 import { DownloadBlock } from "./comp/Footer/Download/DownloadBlock";
 import { SubscribeBtn } from "./comp/SubscribeBtn";
+import { Preloader } from "./comp/Preloader";
+import * as $ from "jquery";
+
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            ready: false
+        };
+
+        this.appLoad = this.appLoad.bind(this);
+    }
+
+    appLoad() {
+        this.setState({
+            ready: true
+        })
+    }
+
   render() {
     return (
-      <div className="App">
+      <div className="App" onLoad={this.appLoad}>
           <Header/>
           <Main/>
           <Footer/>
           <ContactsBlock/>
           <DownloadBlock/>
           <SubscribeBtn/>
+          <Preloader/>
       </div>
     );
   }

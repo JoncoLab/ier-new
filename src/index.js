@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import * as firebase from "firebase";
+import * as $ from "jquery";
 
 const config = {
     apiKey: "AIzaSyBpHU2f2qR3QZTo5nIV1TWD0EgcJVQ_Qfg",
@@ -28,3 +29,5 @@ firebase.auth(firebase.app("ier-new")).signInAnonymously().then(
         alert("Сталася помилка:\r\n" + code + "\r\n" + name);
     }
 );
+
+

@@ -10,6 +10,17 @@
   font-family: OpenSans;
   src: url("./fonts/OpenSansRegular.ttf"); }
 
+@keyframes preloaderAnim {
+  from {
+    transform: rotate(0deg); }
+  35% {
+    transform: rotate(85deg); }
+  85% {
+    transform: rotate(360deg); }
+  to {
+    display: none;
+    transform: rotate(360deg); } }
+
 .content-line {
   display: flex;
   justify-content: center;
@@ -173,7 +184,7 @@
       .content-line .content-block.anouncements .content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         min-height: 80%; }
         .content-line .content-block.anouncements .content .anouncements-item {
           display: flex; }
