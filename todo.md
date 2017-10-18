@@ -58,3 +58,10 @@
 Оголошуэться набыр на курси гыдыв перекладачыв
 Міс
 Батьки можуть
+
+V3
+header width 80%
+social btn font-size -
+youTube playBtn
+Map FMEV
+subscribe Btn

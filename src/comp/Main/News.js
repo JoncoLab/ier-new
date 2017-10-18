@@ -20,7 +20,6 @@ export class NewsBlock extends Component {
         const current = this;
         firebase.database(firebase.app("ier-new"))
             .ref("news")
-            .endAt(3)
             .once("value")
             .then(function(dataSnapshot) {
                 dataSnapshot.forEach(function (newsContentSnapshot) {
