@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {ContentLine} from "./Main/ContentLine";
 import {ContentBlock} from "./Main/ContentBlock";
 import {Gallery} from "./Main/Gallery";
+import {NewsBlock} from "./Main/News";
 
 export class Main extends Component {
     render() {
@@ -11,7 +12,7 @@ export class Main extends Component {
                     <Gallery/>
                 </ContentLine>
                 <ContentLine>
-                    <ContentBlock name="news" caption="Новини">
+                    <NewsBlock name="news" caption="Новини">
                         <article className="news-item">
                             <div className="news-image">
                                 <img alt="img" src="./img/img-3.jpg"/>
@@ -33,7 +34,7 @@ export class Main extends Component {
                             <h3>Меморандум про співпрацю</h3>
                             <p className="date">26 Вер.</p>
                         </article>
-                    </ContentBlock>
+                    </NewsBlock>
                     <ContentBlock name="anouncements" caption="Анонси">
                         <article className="anouncements-item">
                             <p className="date">30 Вер.</p>
