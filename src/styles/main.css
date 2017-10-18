@@ -18,7 +18,7 @@
   max-width: 75%; }
   .content-line:not(:first-of-type) {
     min-height: 375px;
-    max-height: 500px; }
+    max-height: 450px; }
   .content-line .gallery {
     margin: 20px;
     box-shadow: -2px 2px 6.66667px 0 #01487e;
@@ -30,7 +30,7 @@
     .content-line .gallery .container {
       width: 100%;
       height: 100%;
-      transition-duration: 0.2s;
+      transition-duration: 0.4s;
       transition-timing-function: linear;
       display: flex; }
       .content-line .gallery .container img {
@@ -71,13 +71,15 @@
         padding: 10px 10px 5px 20px; }
       .content-line .gallery .caption .counter {
         text-align: right;
-        margin: 0 5px 5px 0; }
+        margin: 0 10px 10px 0; }
         .content-line .gallery .caption .counter .counter-point {
           cursor: pointer;
           font-size: 0.5em;
           letter-spacing: 1em;
           border: 2px solid white;
-          margin: 5px; }
+          margin: 7px;
+          transition-duration: 0.2s;
+          transition-timing-function: linear; }
           .content-line .gallery .caption .counter .counter-point.active {
             background-color: white; }
     .content-line .gallery:hover .arrow {
@@ -94,8 +96,8 @@
       margin: 0;
       font-family: OpenSans, Helvetica, sans-serif;
       font-weight: normal;
-      font-size: 1.5em;
-      color: #1a2e64;
+      font-size: 1.45em;
+      color: #01487e;
       text-transform: uppercase; }
     .content-line .content-block .content h3 {
       color: #686868;
@@ -124,10 +126,10 @@
         .content-line .content-block.news .content .news-item {
           flex-grow: 1;
           flex-basis: 30%;
-          justify-content: space-between;
           padding: 10px;
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          justify-content: space-between; }
           .content-line .content-block.news .content .news-item .news-image {
             flex-basis: 60%;
             min-height: 60%;
@@ -150,13 +152,14 @@
               width: 0;
               height: 0; }
           .content-line .content-block.news .content .news-item .date {
+            margin: 0 0 30px 0;
             flex-shrink: 1;
             max-height: 15%;
             position: relative;
             color: #757575;
             padding: 5px 0 0;
             font-family: Helvetica, sans-serif;
-            font-size: 0.75em; }
+            font-size: 0.8em; }
             .content-line .content-block.news .content .news-item .date:after {
               position: absolute;
               bottom: 100%;
@@ -169,7 +172,9 @@
       flex-basis: 25%; }
       .content-line .content-block.anouncements .content {
         display: flex;
-        flex-direction: column; }
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 80%; }
         .content-line .content-block.anouncements .content .anouncements-item {
           display: flex; }
           .content-line .content-block.anouncements .content .anouncements-item p {
@@ -178,7 +183,7 @@
             padding: 5px 15px; }
             .content-line .content-block.anouncements .content .anouncements-item p.date {
               font-family: OpenSans, Helvetica, sans-serif;
-              font-size: 0.9em;
+              font-size: 0.8em;
               border-right: 2px solid #757575; }
     .content-line .content-block.lectures, .content-line .content-block.feedback {
       flex-basis: 30%; }
@@ -198,6 +203,7 @@
             .content-line .content-block.lectures .content [class$="item"] [class$="image"] img, .content-line .content-block.feedback .content [class$="item"] [class$="image"] img {
               object-fit: cover;
               max-width: 110%;
+              width: 100%;
               min-width: 100%; }
     .content-line .content-block.why .content {
       display: flex; }
@@ -212,6 +218,6 @@
           display: flex;
           flex-direction: column; }
           .content-line .content-block.why .content [class$="item"] [class$="image"] img {
-            display: inline-block;
+            width: 100%;
             max-width: 100%;
             flex-grow: 1; }

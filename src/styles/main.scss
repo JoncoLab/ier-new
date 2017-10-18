@@ -25,7 +25,7 @@
       width: 100%;
       height: 100%;
       transition: {
-        duration: $time;
+        duration: $time * 2;
         timing-function: linear;
       }
       display: flex;
@@ -73,7 +73,6 @@
       background: {
         color: transparentize($blue, 0.3);
       }
-      //transform: translateY(100%);
       transition: {
         duration: $time;
         timing-function: linear;
@@ -103,6 +102,11 @@
           letter-spacing: 1em;
           border: $line / 5 solid white;
           margin: $line * 0.7;
+
+          transition: {
+            duration: $time;
+            timing-function: linear;
+          }
 
           &.active {
             background: {
