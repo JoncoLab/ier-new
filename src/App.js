@@ -7,7 +7,6 @@ import { ContactsBlock } from "./comp/Footer/Contacts/ContactsBlock";
 import { DownloadBlock } from "./comp/Footer/Download/DownloadBlock";
 import { SubscribeBtn } from "./comp/SubscribeBtn";
 import { Preloader } from "./comp/Preloader";
-import * as $ from "jquery";
 
 
 class App extends Component {
