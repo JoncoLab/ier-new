@@ -13,10 +13,11 @@ const config = {
     storageBucket: "international-economic-relati.appspot.com",
     messagingSenderId: "413710662977"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(config, "ier-new");
+
 let root = document.getElementById('root');
 
-firebase.auth().signInAnonymously().then(
+firebase.auth(firebase.app("ier-new")).signInAnonymously().then(
     function () {
         ReactDOM.render(<App/>, root);
         registerServiceWorker();

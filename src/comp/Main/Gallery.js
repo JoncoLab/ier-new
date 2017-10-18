@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as $ from "jquery";
+import firebase from "firebase";
 
 export class Gallery extends Component {
     constructor(props) {
@@ -31,6 +32,7 @@ export class Gallery extends Component {
         const counters = $('.gallery .caption .counter .counter-point');
         counters.removeClass("active");
         $(counters[target]).addClass("active");
+        alert(firebase.storage(firebase.app("ier-new")).ref("gallery/"));
     }
     next() {
         this.switchItem(this.state.currentItem + 1);
