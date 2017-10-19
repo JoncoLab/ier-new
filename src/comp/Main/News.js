@@ -10,11 +10,8 @@ export class NewsBlock extends Component {
         this.getContent = this.getContent.bind(this);
         this.getContent();
     }
-
-    captions = [];
-    dates = [];
-    images = [];
     articles = [];
+    captions = [];
 
     getContent() {
         const current = this;
@@ -26,12 +23,9 @@ export class NewsBlock extends Component {
                     let caption = newsContentSnapshot.child("caption").val(),
                         date = newsContentSnapshot.child("date").val(),
                         image = newsContentSnapshot.child("image").val(),
-                        newsArticle = newsContentSnapshot.val().toString();
-
+                        article = newsContentSnapshot.key;
+                    current.articles.push(article);
                     current.captions.push(caption);
-                    current.dates.push(date);
-                    current.images.push(image);
-                    current.articles.push(newsArticle);
                 });
             });
     }
@@ -42,16 +36,11 @@ export class NewsBlock extends Component {
                 <h2 className="caption">{this.props.caption}</h2>
                 <div className="content">
                         {
-                            this.articles.map((count) =>
-                                <article className="news-item count">
+                            this.articles.map((articleProps) =>
+                                <article className="news-item">
+                                    {
 
-                                    <div className="news-image">
-                                        {
-                                            this.images.map((src) =>
-                                                <img alt="img" src={src}/>
-                                            )
-                                        }
-                                    </div>
+                                    }
                                 </article>
                             )
                         }

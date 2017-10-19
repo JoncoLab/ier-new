@@ -5,8 +5,8 @@ export class Copyright extends Component {
         return (
             <div className="Copyright">
                 <span>© ФМЕВ УжНУ - all rights reserved</span>
-                <span>Developed by:</span>
-                <span>Jonco Lab Web Development</span>
+                <a href="https://joncolab.pro">Developed by:</a>
+                <a href="https://joncolab.pro">Jonco Lab Web Development</a>
             </div>
         );
     }
