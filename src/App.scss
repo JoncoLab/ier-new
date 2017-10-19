@@ -8,11 +8,12 @@ body {
 html {
 
   body {
-    
-    @import "styles/media/mediaS.scss";
-    @import "styles/media/mediaM.scss";
-    @import "styles/media/mediaL.scss";
-    @import "styles/media/mediaXL.scss";
+    font-size: 120%;
+
+    //@import "styles/media/mediaS.scss";
+    //@import "styles/media/mediaM.scss";
+    //@import "styles/media/mediaL.scss";
+    //@import "styles/media/mediaXL.scss";
 
     @include noScroll;
 

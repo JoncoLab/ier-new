@@ -12,29 +12,7 @@ export class Main extends Component {
                     <Gallery/>
                 </ContentLine>
                 <ContentLine>
-                    <NewsBlock name="news" caption="Новини">
-                        <article className="news-item">
-                            <div className="news-image">
-                                <img alt="img" src="./img/img-3.jpg"/>
-                            </div>
-                            <h3>Залучення іноземних туристів</h3>
-                            <p className="date">26 Вер.</p>
-                        </article>
-                        <article className="news-item">
-                            <div className="news-image">
-                                <img alt="img" src="./img/img-2.jpg"/>
-                            </div>
-                            <h3>Міграційна політика Швейцарії та Європи</h3>
-                            <p className="date">26 Вер.</p>
-                        </article>
-                        <article className="news-item">
-                            <div className="news-image">
-                                <img alt="img" src="./img/img-4.jpg"/>
-                            </div>
-                            <h3>Меморандум про співпрацю</h3>
-                            <p className="date">26 Вер.</p>
-                        </article>
-                    </NewsBlock>
+                    <NewsBlock name="news" caption="Новини"/>
                     <ContentBlock name="anouncements" caption="Анонси">
                         <article className="anouncements-item">
                             <p className="date">30 Вер.</p>
