@@ -3,6 +3,7 @@ import {ContentLine} from "./Main/ContentLine";
 import {ContentBlock} from "./Main/ContentBlock";
 import {Gallery} from "./Main/Gallery";
 import {NewsBlock} from "./Main/News";
+import {AnnouncementsBlock} from "./Main/Announcemets";
 
 export class Main extends Component {
     render() {
@@ -13,24 +14,7 @@ export class Main extends Component {
                 </ContentLine>
                 <ContentLine>
                     <NewsBlock name="news" caption="Новини"/>
-                    <ContentBlock name="anouncements" caption="Анонси">
-                        <article className="anouncements-item">
-                            <p className="date">30 Вер.</p>
-                            <p>Анонс</p>
-                        </article>
-                        <article className="anouncements-item">
-                            <p className="date">30 Вер.</p>
-                            <p>Анонс</p>
-                        </article>
-                        <article className="anouncements-item">
-                            <p className="date">30 Вер.</p>
-                            <p>Анонс</p>
-                        </article>
-                        <article className="anouncements-item">
-                            <p className="date">30 Вер.</p>
-                            <p>Анонс</p>
-                        </article>
-                    </ContentBlock>
+                    <AnnouncementsBlock name="announcements" caption="Анонси"/>
                 </ContentLine>
                 <ContentLine className="full-width">
                     <ContentBlock name="why" caption="Чому ФМЕВ?">
