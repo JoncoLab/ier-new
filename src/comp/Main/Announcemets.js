@@ -6,20 +6,20 @@ export class AnnouncementsBlock extends Component {
     constructor(props) {
         super(props);
 
-        this.getContent = this.getContent.bind(this);
-        this.getContent();
+        this.getAnnoun= this.getAnnoun.bind(this);
+        this.getAnnoun();
     }
 
     articles = [];
 
-    getContent() {
+    getAnnoun() {
         const current = this;
         firebase.database(firebase.app("ier-new"))
             .ref("announcements")
             .limitToFirst(4)
             .once("value")
-            .then(function (announcementsSnapshot) {
-                announcementsSnapshot.forEach(function () {
+            .then(function(dataSnapshot) {
+                dataSnapshot.forEach(function (announcementsSnapshot) {
                     let caption = announcementsSnapshot.child("caption").val(),
                         date = announcementsSnapshot.child("date").val(),
                         article = {
@@ -37,10 +37,10 @@ export class AnnouncementsBlock extends Component {
                 <h2 className="caption">{this.props.caption}</h2>
                 <div className="content">
                     {
-                        this.articles.map((item) =>
+                        this.articles.map((content) =>
                             <article className="announcements-item">
-                                <p className="date">{item.date}</p>
-                                <p>{item.caption}</p>
+                                <p className="date">{content.date}</p>
+                                <p>{content.caption}</p>
                             </article>
                         )
                     }

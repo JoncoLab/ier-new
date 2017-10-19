@@ -32,8 +32,8 @@ body {
   width: 100%;
   height: 100%; }
 
-html {
-  font-size: 20px; }
+html body {
+  font-size: 120%; }
   html body::-webkit-scrollbar {
     width: 0;
     height: 0; }
@@ -480,23 +480,24 @@ html {
     justify-content: center;
     margin: 0 auto;
     width: 1100px;
-    max-width: 75%; }
-    html body main .content-line:not(:first-of-type) {
-      min-height: 375px;
-      max-height: 450px; }
+    max-width: 75%;
+    min-height: 375px;
+    max-height: 450px; }
     html body main .content-line.full-width {
       width: 100%;
       min-width: 100%;
       max-width: 100%;
       margin: 0;
       max-height: none; }
+    html body main .content-line.large {
+      min-height: 375px;
+      max-height: none; }
     html body main .content-line .gallery {
       margin: 20px;
       flex-grow: 1;
       position: relative;
-      min-height: 500px;
-      max-height: 540px;
-      overflow: hidden; }
+      overflow: hidden;
+      height: 500px; }
       html body main .content-line .gallery .container {
         width: 100%;
         height: 100%;
@@ -601,8 +602,9 @@ html {
             flex-direction: column;
             justify-content: space-between; }
             html body main .content-line .content-block.news .content .news-item .news-image {
-              flex-basis: 60%;
-              min-height: 60%;
+              width: 100%;
+              flex-basis: 50%;
+              min-height: 50%;
               overflow: hidden; }
               html body main .content-line .content-block.news .content .news-item .news-image img {
                 min-height: 100%;
@@ -612,17 +614,16 @@ html {
               margin: 5px 0 0;
               padding: 0;
               font-family: OpenSans, Helvetica, sans-serif;
-              font-weight: normal;
-              font-size: 0.85em;
-              flex-basis: 29%;
-              min-height: 29%;
+              font-size: 0.8em;
+              flex-basis: 35%;
+              min-height: 35%;
               flex-grow: 1;
               overflow: scroll; }
               html body main .content-line .content-block.news .content .news-item h3::-webkit-scrollbar {
                 width: 0;
                 height: 0; }
             html body main .content-line .content-block.news .content .news-item .date {
-              margin: 0 0 30px 0;
+              margin: 0 0 10px 0;
               flex-shrink: 1;
               max-height: 15%;
               position: relative;
@@ -636,25 +637,34 @@ html {
                 display: block;
                 content: "";
                 width: 40%;
-                height: 2px;
+                height: 1.5px;
                 background-color: #757575; }
-      html body main .content-line .content-block.anouncements {
+      html body main .content-line .content-block.announcements {
         flex-basis: 25%; }
-        html body main .content-line .content-block.anouncements .content {
+        html body main .content-line .content-block.announcements .content {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          min-height: 80%; }
-          html body main .content-line .content-block.anouncements .content .anouncements-item {
-            display: flex; }
-            html body main .content-line .content-block.anouncements .content .anouncements-item p {
-              color: #757575;
-              margin: 10px 0;
-              padding: 5px 15px; }
-              html body main .content-line .content-block.anouncements .content .anouncements-item p.date {
-                font-family: OpenSans, Helvetica, sans-serif;
+          min-height: 85%; }
+          html body main .content-line .content-block.announcements .content .announcements-item {
+            width: 105%;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            html body main .content-line .content-block.announcements .content .announcements-item p {
+              font-family: OpenSans, Helvetica, sans-serif;
+              color: #757575; }
+              html body main .content-line .content-block.announcements .content .announcements-item p.date {
+                flex-basis: 25%;
                 font-size: 0.8em;
-                border-right: 2px solid #757575; }
+                text-align: left; }
+            html body main .content-line .content-block.announcements .content .announcements-item p:last-of-type {
+              border-left: 1.5px solid #757575;
+              flex-grow: 1;
+              padding: 0 0 0 5px;
+              margin: 0 0 0 10px;
+              font-size: 0.85em; }
       html body main .content-line .content-block.lectures, html body main .content-line .content-block.feedback {
         flex-basis: 40%; }
         html body main .content-line .content-block.lectures .caption, html body main .content-line .content-block.feedback .caption {
@@ -698,7 +708,7 @@ html {
           color: white;
           text-align: center;
           box-shadow: inset 0 0 0 5px #55a9cb, 0 0 0 5px #55a9cb, 0 0 0 10px white;
-          font-size: 1.25em;
+          font-size: 1.40em;
           margin: 6.725em 0;
           z-index: 1000;
           position: relative;
@@ -707,18 +717,19 @@ html {
             content: '';
             display: block;
             position: absolute;
-            height: 60px;
+            height: 54.5px;
             width: 100%;
+            bottom: calc(2em - 2px);
             box-shadow: inset 5px 0 0 0 #55a9cb, inset -5px 0 0 0 #55a9cb, -100px 0 0 0 #55a9cb, 100px 0 0 0 #55a9cb;
             border-radius: 5px; }
           html body main .content-line .content-block.why .caption::after {
             content: '';
             display: block;
             position: absolute;
-            width: 60px;
+            width: 54.5px;
             height: 100%;
             top: 0;
-            right: calc(2.5em - (10px * 1.75));
+            right: calc(2.5em - (10px * 1.45));
             box-shadow: inset 0 5px 0 #55a9cb, inset 0 -5px 0 #55a9cb, 0 -100px 0 0 #55a9cb, 0 100px 0 0 #55a9cb;
             border-radius: 5px; }
         html body main .content-line .content-block.why .arrows {
@@ -732,14 +743,28 @@ html {
           display: flex;
           flex-wrap: wrap;
           justify-content: center; }
-          html body main .content-line .content-block.why .content [title^="test-video"] {
+          html body main .content-line .content-block.why .content .video {
             flex-grow: 1;
             flex-basis: 40%;
             border: none;
             padding: 30px;
             box-sizing: content-box;
             outline: 5px solid white;
-            outline-offset: -35px; }
+            outline-offset: -32.5px;
+            overflow: hidden; }
+            html body main .content-line .content-block.why .content .video iframe,
+            html body main .content-line .content-block.why .content .video iframe > * {
+              outline: none;
+              border: none;
+              box-shadow: none;
+              z-index: 0 !important; }
+              html body main .content-line .content-block.why .content .video iframe:active, html body main .content-line .content-block.why .content .video iframe:focus, html body main .content-line .content-block.why .content .video iframe:hover,
+              html body main .content-line .content-block.why .content .video iframe > *:active,
+              html body main .content-line .content-block.why .content .video iframe > *:focus,
+              html body main .content-line .content-block.why .content .video iframe > *:hover {
+                outline: none;
+                border: none;
+                box-shadow: none; }
   html body footer {
     width: 100%;
     height: 530px;
@@ -886,7 +911,7 @@ html {
           height: 65%; }
         html body footer .footer-content .footer-add .Copyright {
           width: 100%;
-          margin: 20px 0;
+          margin: 30px 0;
           color: white;
           display: flex;
           flex-direction: column;

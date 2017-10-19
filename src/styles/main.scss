@@ -213,8 +213,9 @@
           justify-content: space-between;
 
           .news-image {
-            flex-basis: 60%;
-            min-height: 60%;
+            width: 100%;
+            flex-basis: 50%;
+            min-height: 50%;
             overflow: hidden;
 
             img {
@@ -229,18 +230,17 @@
             padding: 0;
             font: {
               family: OpenSans, Helvetica, sans-serif;
-              weight: normal;
-              size: 0.85em;
+              size: 0.8em;
             }
-            flex-basis: 29%;
-            min-height: 29%;
+            flex-basis: 35%;
+            min-height: 35%;
             flex-grow: 1;
             overflow: scroll;
             @include noScroll();
           }
 
           .date {
-            margin: 0 0 $line * 3 0;
+            margin: 0 0 $line 0;
             flex-shrink: 1;
             max-height: 15%;
             position: relative;
@@ -257,7 +257,7 @@
               display: block;
               content: "";
               width: 40%;
-              height: $line * 0.2;
+              height: $line * 0.15;
               background: {
                 color: $grey;
               }
@@ -267,29 +267,46 @@
       }
     }
 
-    &.anouncements {
+    &.announcements {
       flex-basis: 25%;
 
       .content {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 80%;
+        min-height: 85%;
 
-        .anouncements-item {
+        .announcements-item {
+          width: 105%;
+          margin: 0 0 $line 0;
           display: flex;
+          align-items: center;
+          justify-content: space-between;
 
           p {
+            font: {
+              family: OpenSans, Helvetica, sans-serif;
+            }
             color: $grey;
-            margin: $line 0;
-            padding: $line / 2 $line * 1.5;
 
             &.date {
+              flex-basis: 25%;
               font: {
-                family: OpenSans, Helvetica, sans-serif;
                 size: 0.8em;
               }
-              border-right: $line / 5 solid $grey;
+              text: {
+                align: left;
+              }
+            }
+          }
+
+          p:last-of-type {
+            border-left: $line * 0.15 solid $grey;
+            flex-grow: 1;
+            padding: 0 0 0 $line / 2;
+            margin: 0 0 0 $line;
+            font: {
+              size: 0.85em;
             }
           }
         }
