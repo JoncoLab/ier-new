@@ -59,7 +59,7 @@
         resize: none;
         font: {
           family: Helvetica, sans-serif;
-          size: 1em;
+          size: 1.1em;
         }
         color: $grey;
         box-shadow: 0 $line / 5  0 0 $blue;
@@ -84,7 +84,7 @@
       #submit {
         width: 100%;
         margin: 0 0 $line * 2 0;
-        padding: $line / 2 0;
+        padding: $line * .7 0;
         background: {
           color: $blue;
         }
