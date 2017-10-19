@@ -2,18 +2,18 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  @include reset;
 }
 
 html {
-  font: {
-    size: $line * 2;
-  }
 
   body {
+    
+    @import "styles/media/mediaS.scss";
+    @import "styles/media/mediaM.scss";
+    @import "styles/media/mediaL.scss";
+    @import "styles/media/mediaXL.scss";
+
     @include noScroll;
 
     @import "styles/contacts-block.scss";
