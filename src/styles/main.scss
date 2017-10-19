@@ -281,7 +281,6 @@
           margin: 0 0 $line 0;
           display: flex;
           align-items: center;
-          justify-content: space-between;
 
           p {
             font: {
@@ -290,7 +289,8 @@
             color: $grey;
 
             &.date {
-              flex-basis: 25%;
+              flex-basis: 27%;
+              flex-shrink: 1;
               font: {
                 size: 0.8em;
               }

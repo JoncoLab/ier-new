@@ -200,13 +200,13 @@
           width: 105%;
           margin: 0 0 10px 0;
           display: flex;
-          align-items: center;
-          justify-content: space-between; }
+          align-items: center; }
           .content-line .content-block.announcements .content .announcements-item p {
             font-family: OpenSans, Helvetica, sans-serif;
             color: #757575; }
             .content-line .content-block.announcements .content .announcements-item p.date {
-              flex-basis: 25%;
+              flex-basis: 27%;
+              flex-shrink: 1;
               font-size: 0.8em;
               text-align: left; }
           .content-line .content-block.announcements .content .announcements-item p:last-of-type {
