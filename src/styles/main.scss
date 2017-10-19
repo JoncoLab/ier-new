@@ -148,7 +148,7 @@
     position: relative;
 
     .caption {
-      margin: 0;
+      margin: 0 $line;
       font: {
         family: OpenSans, Helvetica, sans-serif;
         weight: normal;
@@ -157,6 +157,7 @@
       color: $main;
       text: {
         transform: uppercase;
+        align: right;
       }
     }
 
@@ -356,6 +357,7 @@
         color: $blue;
       }
       margin: $line * 2 0;
+      padding: 0;
       position: relative;
       display: flex;
       justify-content: center;
@@ -435,10 +437,12 @@
 
       .content {
         position: absolute;
-        width: 75%;
+        width: 76%;
         height: 100%;
         top: 0;
-        left: 12.5%;
+        left: 12%;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -453,12 +457,11 @@
           outline-offset: $line * -3.25;
           overflow: hidden;
 
-          iframe,
-          iframe > * {
+          iframe {
             outline: none;
             border: none;
             box-shadow: none;
-            z-index: 0 !important;
+            z-index: 100 !important;
 
             &:active,
             &:focus,

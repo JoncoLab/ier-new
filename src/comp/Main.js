@@ -32,7 +32,7 @@ export class Main extends Component {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                src="https://www.youtube.com/embed/2UuUrdReHNk?rel=0&amp;controls=0&amp;showinfo=0"
                                 title="top-right-video"
                             >
 
@@ -42,7 +42,7 @@ export class Main extends Component {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                src="https://www.youtube.com/embed/bcXkMSUfAVQ?rel=0&amp;controls=0&amp;showinfo=0"
                                 title="bottom-left-video"
                             >
 
@@ -52,7 +52,7 @@ export class Main extends Component {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F596691557077541%2Fvideos%2F707763685970327%2F&show_text=0"
                                 title="bottom-right-video"
                             >
 
