@@ -63,8 +63,8 @@ export class Gallery extends Component {
                 </span>
                 <div className="container" style={{transform: "translateX(" + this.state.currentItem * -100 + "%)"}}>
                     {
-                        this.images.map((src) =>
-                            <img src={src}/>
+                        this.images.map((src, i) =>
+                            <img src={src} alt={"Гаряча новина " + i}/>
                         )
                     }
                 </div>
@@ -77,7 +77,7 @@ export class Gallery extends Component {
                     <div className="counter">
                         {
                             this.spans.map((i) =>
-                                <span onClick={(e) => this.switchItem(i - 1)} className={"counter-point" + (i === 1 ? " active" : "")}> </span>
+                                <span onClick={(e) => this.switchItem(i - 1)} className={"counter-point" + (i === "1" ? " active" : "")}> </span>
                             )
                         }
                     </div>

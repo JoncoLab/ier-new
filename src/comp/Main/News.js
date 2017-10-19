@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {Arrows} from "./Arrows";
-import * as $ from "jquery";
 import * as firebase from "firebase";
 
 export class NewsBlock extends Component {
