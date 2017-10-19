@@ -54,13 +54,52 @@ export class Main extends Component {
                         </article>
                     </ContentBlock>
                 </ContentLine>
-                <ContentLine>
-                    <ContentBlock name="why" caption="Чому ФМЕВ">
+                <ContentLine className="full-width">
+                    <ContentBlock name="why" caption="Чому ФМЕВ?">
+                        <div className="video top-left">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                title="top-left-video"
+                            >
 
+                            </iframe>
+                        </div>
+                        <div className="video top-right">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                title="top-right-video"
+                            >
+
+                            </iframe>
+                        </div>
+                        <div className="video bottom-left">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                title="bottom-left-video"
+                            >
+
+                            </iframe>
+                        </div>
+                        <div className="video bottom-right">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/r0bGdA_uQXc?rel=0&amp;controls=0&amp;showinfo=0"
+                                title="bottom-right-video"
+                            >
+
+                            </iframe>
+                        </div>
                     </ContentBlock>
                 </ContentLine>
                 <ContentLine>
-                    <ContentBlock name="lectures" caption="Публічне життя">
+                    <ContentBlock name="lectures" caption="Студентське життя">
                         <article className="lectures-item">
                             <div className="lectures-image">
                                 <img alt="img" src="./img/img-3.jpg"/>

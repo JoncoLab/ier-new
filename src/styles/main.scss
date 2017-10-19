@@ -12,9 +12,17 @@
     max-height: $line * 45;
   }
 
+  &.full-width {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    max-height: none;
+  }
+
   .gallery {
     margin: $line * 2;
-    box-shadow: $line / -5 $line / 5 $line / 1.5 0 $main;
+    //box-shadow: $line / -5 $line / 5 $line / 1.5 0 $main;
     flex-grow: 1;
     position: relative;
     min-height: $line * 50;
@@ -289,9 +297,12 @@
 
     &.lectures,
     &.feedback {
-      flex-basis: 30%;
+      flex-basis: 40%;
 
       .caption {
+        text: {
+          align: center;
+        }
         font: {
           size: 1.1em;
         }
@@ -323,28 +334,104 @@
     }
 
     &.why {
+      background: {
+        color: $blue;
+      }
+      margin: $line * 2 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .caption {
+        background: {
+          color: $main;
+        }
+        border: {
+          radius: 50%;
+          style: groove;
+          width: 1.5em;
+          color: $main;
+        }
+        padding: .5em;
+        height: 5em;
+        width: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text: {
+          align: center;
+        }
+        box-shadow:
+                inset 0 0 0 $line / 2 $blue,
+                0 0 0 $line / 2 $blue,
+                0 0 0 $line white;
+        font: {
+          size: 1.25em;
+        }
+        margin: 6.725em 0;
+        z-index: 1000;
+        position: relative;
+        box-sizing: content-box;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          height: $line * 6;
+          width: 100%;
+          box-shadow:
+                  inset $line / 2 0 0 0 $blue,
+                  inset $line / -2 0 0 0 $blue,
+                  $line * -10 0 0 0 $blue,
+                  $line * 10 0 0 0 $blue;
+          border: {
+            radius: $line / 2;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: $line * 6;
+          height: 100%;
+          top: 0;
+          right: calc(2.5em - (#{$line} * 1.75));
+          box-shadow:
+                  inset 0 $line / 2 0 $blue,
+                  inset 0 $line / -2 0 $blue,
+                  0 $line * -10 0 0 $blue,
+                  0 $line * 10 0 0 $blue;
+          border: {
+            radius: $line / 2;
+          }
+        }
+      }
+
+      .arrows {
+        display: none;
+      }
 
       .content {
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        top: 0;
+        left: 12.5%;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        [class$="item"] {
-          justify-content: space-between;
-          padding: $line;
-          display: flex;
-          flex-direction: column;
-
-          [class$="image"] {
-            flex-grow: 1;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-
-            img {
-              width: 100%;
-              max-width: 100%;
-              flex-grow: 1;
-            }
-          }
+        [title^="test-video"] {
+          flex-grow: 1;
+          flex-basis: 40%;
+          border: none;
+          padding: $line * 3;
+          box-sizing: content-box;
+          outline: $line / 2 solid white;
+          outline-offset: $line * -3.5;
         }
       }
     }

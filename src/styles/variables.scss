@@ -23,6 +23,11 @@ $lightGrey: #BDBDBD;
   src: url('./fonts/OpenSansRegular.ttf');
 }
 
+@font-face {
+  font-family: IcoV2;
+  src: url('./fonts/icoV2.ttf');
+}
+
 @mixin noScroll() {
   &::-webkit-scrollbar {
     width: 0;
@@ -52,6 +57,34 @@ $lightGrey: #BDBDBD;
       }
     }
   }
+}
+
+@mixin weirdCaption() {
+  background: {
+    color: $main;
+  }
+  border: {
+    radius: 50%;
+    style: dashed;
+    width: 1.5em;
+    color: $blue;
+  }
+  box-shadow:
+          0 0 0 $line $main,
+          $line * 2 $line * -2 0 0 $main,
+          $line * - 2 0 0 $line * 2 $main,
+          $line * 2 $line * 2 0 $line $main;
+  height: 5em;
+  width: 5em;
+  display: flex;
+  align-items: center;
+  text: {
+    align: center;
+  }
+  color: white;
+  filter:
+          drop-shadow(0 0 $line * 5 $blue)
+          drop-shadow(0 0 $line white);
 }
 
 @keyframes preloaderAnim {
