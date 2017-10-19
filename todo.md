@@ -72,16 +72,17 @@ V4!->
     √ header width 80%
     √ social btn font-size --
     √ youTube playBtn
-    - Map FMEV
+    √ Map FMEV
     - subscribe Btn
-    - SCHEDULE!!! on MEV and PL 
     √ current(first) square in the gallery
     √ News database render
     √ Announcements database render
     √ copyright link to Jonco Lab Web Development motherfucker
 
-    - denna > specialnist > courses I - V > V course first year of education and the second
-    - denna > specialnist#2 > courses I - V > (V course first year of education and the second)
+    - Schedule {
+        - denna > specialnist > courses I - V > V course first year of education and the second
+        - denna > specialnist#2 > courses I - V > (V course first year of education and the second)
+    }
 
     - students life(facebook video) fixedBlock(notFullScreen & Full)
     - history of success(facebook video ...
