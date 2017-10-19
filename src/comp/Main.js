@@ -8,7 +8,7 @@ export class Main extends Component {
     render() {
         return (
             <main>
-                <ContentLine>
+                <ContentLine className="large">
                     <Gallery/>
                 </ContentLine>
                 <ContentLine>

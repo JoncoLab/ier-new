@@ -6,11 +6,8 @@
   margin: 0 auto;
   width: $line * 110;
   max-width: 75%;
-
-  &:not(:first-of-type) {
-    min-height: $line * 37.5;
-    max-height: $line * 45;
-  }
+  min-height: $line * 37.5;
+  max-height: $line * 45;
 
   &.full-width {
     width: 100%;
@@ -20,14 +17,18 @@
     max-height: none;
   }
 
+  &.large {
+    min-height: $line * 37.5;
+    max-height: none;
+  }
+
   .gallery {
     margin: $line * 2;
     //box-shadow: $line / -5 $line / 5 $line / 1.5 0 $main;
     flex-grow: 1;
     position: relative;
-    min-height: $line * 50;
-    max-height: $line * 54;
     overflow: hidden;
+    height: $line * 50;
 
     .container {
       width: 100%;
@@ -379,8 +380,9 @@
           content: '';
           display: block;
           position: absolute;
-          height: $line * 6;
+          height: $line * 5.45;
           width: 100%;
+          bottom: calc(2em - #{$line / 5});
           box-shadow:
                   inset $line / 2 0 0 0 $blue,
                   inset $line / -2 0 0 0 $blue,
@@ -395,10 +397,10 @@
           content: '';
           display: block;
           position: absolute;
-          width: $line * 6;
+          width: $line * 5.45;
           height: 100%;
           top: 0;
-          right: calc(2.5em - (#{$line} * 1.75));
+          right: calc(2.5em - (#{$line} * 1.45));
           box-shadow:
                   inset 0 $line / 2 0 $blue,
                   inset 0 $line / -2 0 $blue,
@@ -424,14 +426,31 @@
         flex-wrap: wrap;
         justify-content: center;
 
-        [title^="test-video"] {
+        .video {
           flex-grow: 1;
           flex-basis: 40%;
           border: none;
           padding: $line * 3;
           box-sizing: content-box;
           outline: $line / 2 solid white;
-          outline-offset: $line * -3.5;
+          outline-offset: $line * -3.25;
+          overflow: hidden;
+
+          iframe,
+          iframe > * {
+            outline: none;
+            border: none;
+            box-shadow: none;
+            z-index: 0 !important;
+
+            &:active,
+            &:focus,
+            &:hover {
+              outline: none;
+              border: none;
+              box-shadow: none;
+            }
+          }
         }
       }
     }
