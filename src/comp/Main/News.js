@@ -6,16 +6,23 @@ export class NewsBlock extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            newsItem: 1
+        };
+
         this.getContent = this.getContent.bind(this);
-        this.getContent();
+        this.getContent("item-" + this.state.newsItem);
+        this.nextNew = this.nextNew.bind(this);
     }
 
-    articles = [];
+    articles = [""];
 
-    getContent() {
+    getContent(item) {
         const current = this;
         firebase.database(firebase.app("ier-new"))
             .ref("news")
+            .orderByKey()
+            .startAt(item)
             .limitToFirst(3)
             .once("value")
             .then(function(dataSnapshot) {
@@ -31,6 +38,14 @@ export class NewsBlock extends Component {
                     current.articles.push(article);
                 });
             });
+    }
+
+    nextNew() {
+        this.setState({
+            newsItem: this.state.newsItem + 3
+        });
+        let nextItem = this.state.newsItem;
+        this.getContent("item-" + nextItem);
     }
 
     render() {
@@ -50,7 +65,10 @@ export class NewsBlock extends Component {
                         )
                     }
                 </div>
-                <Arrows/>
+                <div className="arrows">
+                    <span>♠</span>
+                    <span onClick={this.nextNew}>•</span>
+                </div>
             </section>
         );
     }
