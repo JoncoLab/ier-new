@@ -11,9 +11,13 @@ export class NavMenu extends Component {
         'Програма вступу до магістратури',
         'Програма вступу до аспірантури'
     ];
-
     studItems = [
-        'Розклад занять (денна форма)',
+        [
+            '$',
+            'Розклад занять (денна форма)',
+            'ФМЕВ',
+            'ПЛ'
+        ],
         'Розклад занять (заочна форма)',
         'Електронна бібліотека',
         'Методичні вказівки',
@@ -26,8 +30,8 @@ export class NavMenu extends Component {
                 <Logo/>
                 <Search/>
                 <div className="main-menu">
-                    <NavBar name="Вступнику" items={this.abItems}/>
-                    <NavBar name="Студенту" items={this.studItems}/>
+                    <NavBar passValue={this.props.passValue} name="Вступнику" items={this.abItems}/>
+                    <NavBar passValue={this.props.passValue} name="Студенту" items={this.studItems}/>
                 </div>
                 <AddMenu/>
                 <SocialButtons/>

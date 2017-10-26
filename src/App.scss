@@ -6,68 +6,110 @@ body {
 }
 
 html {
+  width: 100%;
+  height: 100%;
 
   body {
     font-size: 120%;
-
-    //@import "styles/media/mediaS.scss";
-    //@import "styles/media/mediaM.scss";
-    //@import "styles/media/mediaL.scss";
-    //@import "styles/media/mediaXL.scss";
-
     @include noScroll;
 
-    @import "styles/contacts-block.scss";
-    @import "styles/download-block.scss";
-    @import "styles/subscribe-btn.scss";
+    #root {
 
-    header {
-      width: 100%;
-      max-height: $line * 20;
-      background: {
-        color: $main;
+      .App {
+        display: flex;
+        flex-direction: column;
+
+        &.template {
+          height: 100%;
+
+          header {
+            max-height: none;
+            position: relative;
+
+            &::after {
+              display: block;
+              content: '';
+              width: 15%;
+              height: $line / 2;
+              transform-origin: left;
+              transform: scaleX(0);
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              animation: {
+                duration: $time * 7;
+                name: templateHeader;
+                timing-function: linear;
+                fill-mode: both;
+                iteration-count: infinite;
+              }
+              background: {
+                color: white;
+              }
+              z-index: 10000;
+            }
+          }
+        }
+
+        //@import "styles/media/mediaS.scss";
+        //@import "styles/media/mediaM.scss";
+        //@import "styles/media/mediaL.scss";
+        //@import "styles/media/mediaXL.scss";
+
+        @import "styles/contacts-block.scss";
+        @import "styles/download-block.scss";
+        @import "styles/subscribe-btn.scss";
+
+        header {
+          width: 100%;
+          max-height: $line * 20;
+          background: {
+            color: $main;
+          }
+          flex-grow: 1;
+
+          @import "styles/header.scss";
+        }
+
+        main {
+          @import "styles/main.scss";
+        }
+
+        footer {
+          width: 100%;
+          height: $line * 53;
+          background: {
+            color: $main;
+          }
+          @import "styles/footer.scss";
+        }
       }
 
-      @import "styles/header.scss";
-    }
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: {
+          color: white;
+        }
+        transition: {
+          duration: $time * 2;
+        }
+        z-index: 1000;
 
-    main {
-      @import "styles/main.scss";
-    }
-
-    footer {
-      width: 100%;
-      height: $line * 53;
-      background: {
-        color: $main;
-      }
-      @import "styles/footer.scss";
-    }
-
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      background: {
-        color: white;
-      }
-      transition: {
-        duration: $time * 2;
-      }
-      z-index: 1000;
-
-      svg {
-        stroke: $main;
-        fill: $main;
-        animation: {
-          name: preloaderAnim;
-          duration: $time * 9;
-          iteration-count: infinite;
-          timing-function: ease-in-out;
+        svg {
+          stroke: $main;
+          fill: $main;
+          animation: {
+            name: preloaderAnim;
+            duration: $time * 9;
+            iteration-count: infinite;
+            timing-function: ease-in-out;
+          }
         }
       }
     }

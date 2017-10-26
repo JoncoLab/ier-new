@@ -5,7 +5,7 @@ export class Header extends Component {
     render() {
         return (
             <header>
-                <NavMenu />
+                <NavMenu passValue={this.props.passValue}/>
             </header>
         );
     }

@@ -112,3 +112,43 @@ $lightGrey: #BDBDBD;
     transform: rotate(360deg);
   }
 }
+
+@keyframes templateHeader {
+  from {
+    left: -35%;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  25% {
+    left: 50%;
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  35% {
+    transform: scaleX(2);
+  }
+
+  50% {
+    left: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  60% {
+    transform: scaleX(2);
+  }
+
+  75% {
+    left: 50%;
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  to {
+    left: -35%;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}

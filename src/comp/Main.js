@@ -8,7 +8,7 @@ import {AnnouncementsBlock} from "./Main/Announcemets";
 export class Main extends Component {
     render() {
         return (
-            <main>
+            <main id={"main"}>
                 <ContentLine className="large">
                     <Gallery/>
                 </ContentLine>
