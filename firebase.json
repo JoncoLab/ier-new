@@ -13,6 +13,10 @@
       {
         "source": "/helloWorld",
         "function": "helloWorld"
+      },
+      {
+        "source": "/openPage",
+        "function": "openPage"
       }
     ]
   }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDom from "react-dom";
 import './App.css';
 import { Header } from "./comp/Header";
 import { Main } from "./comp/Main";
@@ -23,42 +22,67 @@ class App extends Component {
 
         this.appLoad = this.appLoad.bind(this);
         this.switchPage = this.switchPage.bind(this);
+        this.templateModeOff = this.templateModeOff.bind(this);
     }
 
     switchPage(name) {
-        const App = this,
-            main = $("#main");
+        if (App.state.page !== name) {
+            const App = this,
+                main = $("#main");
 
+            App.setState({
+                template: true
+            });
 
-        App.setState({
-            template: true
-        });
+            function showPage(page) {
+                App.setState({
+                    page: page
+                });
+            }
 
-        function switcher() {
-            $.ajax({
-                url: "openPage",
-                data: {
-                    page: name
-                },
-                method: 'POST',
-                success: function (data) {
-                    alert(data);
-                },
-                error: function (event) {
-                    alert("event");
-                },
-                complete: function (data) {
-                    alert("ajax ok");
-                }
+            function switcher(name) {
+                $.ajax({
+                    url: "openPage",
+                    data: {
+                        page: name
+                    },
+                    method: 'POST',
+                    success: function (page) {
+                        showPage(page);
+                    },
+                    error: function () {
+                        alert("Server responded with error and cookies haven't been set!");
+                        showPage(name);
+                    },
+                    complete: function () {
+                        alert("Ajax came back");
+                    }
+                });
+            }
+
+            main.slideUp(500, function () {
+                $("#root").animate({
+                    height: "100%"
+                }, {
+                    duration: 250,
+                    complete: () => {
+                        switcher(name)
+                    }
+                });
             });
         }
+    }
+
+    templateModeOff() {
+        const main = $("#main");
+
+        this.setState({
+            template: false
+        });
 
         main.slideUp(500, function () {
-            $("#root").animate({
-                height: "100%"
-            }, {
-                duration: 250,
-                complete: switcher
+            $("#root").css({
+                height: "auto"
             });
         });
     }
@@ -83,7 +107,8 @@ class App extends Component {
           onLoad={this.appLoad}
       >
           <Header passValue={this.switchPage}/>
-          <Main/>
+          <Main onLoad={this.templateModeOff}/>
+          <Pages page={this.state.page}/>
           <Footer/>
           <ContactsBlock/>
           <DownloadBlock/>

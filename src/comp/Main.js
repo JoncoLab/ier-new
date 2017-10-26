@@ -8,7 +8,7 @@ import {AnnouncementsBlock} from "./Main/Announcemets";
 export class Main extends Component {
     render() {
         return (
-            <main id={"main"}>
+            <main id={"main"} onLoad={this.props.onLoad}>
                 <ContentLine className="large">
                     <Gallery/>
                 </ContentLine>

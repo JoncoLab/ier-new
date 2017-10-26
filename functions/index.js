@@ -4,21 +4,27 @@ const functions = require("firebase-functions"),
 admin.initializeApp(functions.config().firebase);
 
 exports.openPage = functions.https.onRequest((request, response) => {
-    const page = request.xhr ?
-        request.body.page :
-        request.path.slice(1);
+    let page = request.body.page,
+        cookie = request.cookies === undefined ?
+            "" :
+            request.cookies.page;
 
-    let cookie = request.cookies.page;
-
-    if (cookie !== page) {
+    if (cookie !== page && typeof page === "string" && page.trim() !== "") {
         cookie = page;
-        response.cookie("page", cookie, {secure: true});
-        response.status(200).send(page);
+        response
+            .cookie(
+                "page",
+                cookie,
+                {
+                    path: "/",
+                    domain: "international-economic-relati.firebaseapp.com",
+                    secure: true,
+                    signed: false
+                }
+            )
+            .status(200)
+            .send(page);
     } else {
-        response.status(200).send();
+        response.status(500).send();
     }
-});
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
- response.send("Hello from Firebase!");
 });

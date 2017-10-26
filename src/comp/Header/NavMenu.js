@@ -33,7 +33,7 @@ export class NavMenu extends Component {
                     <NavBar passValue={this.props.passValue} name="Вступнику" items={this.abItems}/>
                     <NavBar passValue={this.props.passValue} name="Студенту" items={this.studItems}/>
                 </div>
-                <AddMenu/>
+                <AddMenu passValue={this.props.passValue}/>
                 <SocialButtons/>
             </nav>
         );

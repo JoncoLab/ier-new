@@ -1,7 +1,7 @@
 {
   "name": "ier-new",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.4.4",
+  "private": false,
   "dependencies": {
     "firebase": "^4.4.0",
     "firebase-tools": "^3.13.1",
@@ -18,12 +18,12 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "ready": "npm run build && firebase deploy && npm start",
+    "ready": "npm-run-all -p build start && firebase deploy && firebase serve",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "build/index.html",
+  "main": "build/",
   "devDependencies": {},
   "repository": {
     "type": "git",
@@ -34,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/JoncoLab/ier-new/issues"
   },
-  "homepage": "https://ier.joncolab.pro/"
+  "homepage": "https://international-economic-relati.firebaseapp.com/"
 }

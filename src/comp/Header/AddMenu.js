@@ -13,7 +13,7 @@ export class AddMenu extends Component {
         return (
             <nav className="add-menu">
                 <h2>ФМЕВ <span>☻</span></h2>
-                <DropDown items={this.items}/>
+                <DropDown passValue={this.props.passValue} items={this.items}/>
             </nav>
         );
     }
