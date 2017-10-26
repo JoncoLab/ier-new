@@ -28,9 +28,16 @@ export class Pages extends Component {
         return target;
     }
     render() {
-        return ReactDOM.createPortal(
-            this.state.page,
-            document.getElementById("main")
-        );
+        // return ReactDOM.createPortal(
+        //     this.state.page,
+        //     document.getElementById("main")
+        // );
+        return (
+            <div>
+                {
+                    this.state.page
+                }
+            </div>
+        )
     }
 }

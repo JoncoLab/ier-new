@@ -11,8 +11,36 @@
   z-index: 1000;
 
   .logo {
+    position: relative;
     flex-basis: 13%;
-    margin: $line / 2 auto $line / 2 $line * 2;
+    margin: 0 auto 0 $line * 2;
+    padding: $line / 2 $line * 2;
+    box-shadow: $line * -10 0 0 0 $blue;
+
+    background: {
+      color: $blue;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 0;
+      left: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: {
+        width: 4.1em;
+        style: solid;
+        color: $blue;
+        right: none;
+        top-color: transparent;
+        bottom-color: transparent;
+      }
+      z-index: 1000;
+      transform: scaleX(.7);
+      transform-origin: left;
+    }
 
     img {
       object-fit: contain;

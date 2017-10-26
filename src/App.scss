@@ -34,7 +34,7 @@ html {
               transform-origin: left;
               transform: scaleX(0);
               position: absolute;
-              bottom: 0;
+              bottom: 10%;
               left: 0;
               animation: {
                 duration: $time * 7;
@@ -67,6 +67,7 @@ html {
             color: $main;
           }
           flex-grow: 1;
+          overflow: hidden;
 
           @import "styles/header.scss";
         }

@@ -8,7 +8,6 @@ import { DownloadBlock } from "./comp/Footer/Download/DownloadBlock";
 import { SubscribeBtn } from "./comp/SubscribeBtn";
 import { Preloader } from "./comp/Preloader";
 import * as $ from "jquery";
-import {Pages} from "./Pages";
 
 
 class App extends Component {
@@ -26,9 +25,9 @@ class App extends Component {
     }
 
     switchPage(name) {
+        const App = this;
         if (App.state.page !== name) {
-            const App = this,
-                main = $("#main");
+            const main = $("#main");
 
             App.setState({
                 template: true
@@ -53,9 +52,6 @@ class App extends Component {
                     error: function () {
                         alert("Server responded with error and cookies haven't been set!");
                         showPage(name);
-                    },
-                    complete: function () {
-                        alert("Ajax came back");
                     }
                 });
             }
@@ -107,8 +103,7 @@ class App extends Component {
           onLoad={this.appLoad}
       >
           <Header passValue={this.switchPage}/>
-          <Main onLoad={this.templateModeOff}/>
-          <Pages page={this.state.page}/>
+          <Main/>
           <Footer/>
           <ContactsBlock/>
           <DownloadBlock/>
