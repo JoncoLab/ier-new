@@ -14,21 +14,23 @@ export class Pages extends Component {
         this.target = Pages.getPage(this.props.page);
     }
     static getPage(page) {
+        let target;
         switch (page) {
             case "main":
-                return <Main/>;
+                target = <Main/>;
                 break;
             case "ФМЕВ":
-                return <Schedule/>;
+                target = <Schedule/>;
                 break;
             default:
-                return <Main/>;
-            }
+                target = <Main/>;
+        }
+        return target;
     }
     render() {
         return ReactDOM.createPortal(
             this.state.page,
-            ReactDOM.findDOMNode(document.getElementById("root").querySelector("#main"))
+            document.getElementById("main")
         );
     }
 }
