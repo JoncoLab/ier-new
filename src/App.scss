@@ -32,7 +32,7 @@ html {
             box-sizing: border-box;
             width: 95% $i;
             max-width: $line * 32 $i;
-            padding: $line * 3 0 $i;
+            padding: 15% 0 $i;
             min-height: inherit;
             flex-wrap: wrap;
             justify-content: space-evenly $i;
@@ -118,11 +118,14 @@ html {
 
             .add-menu {
               order: 5;
-              max-width: 80%;
+              min-width: 90%;
 
               h2 {
                 font: {
                   size: 1.6em $i;
+                }
+                text: {
+                  align: center;
                 }
               }
             }
@@ -225,10 +228,6 @@ html {
             margin: $line auto $i;
             min-height: $line * 20 $i;
 
-            &:not(.large) {
-              display: none $i;
-            }
-
             &.large {
               margin: 0 0 $line 0 $i;
               width: 100% $i;
@@ -281,9 +280,16 @@ html {
             }
 
             .content-block {
+              box-sizing: border-box;
+              width: 97.5% $i;
+              margin: $line 0 $i;
+              padding: 0 $i;
+              font: {
+                size: 0.85em;
+              }
 
               .caption {
-
+                text-align: left $i;
               }
 
               .content {
@@ -301,8 +307,12 @@ html {
               }
 
               &.news {
+                flex-direction: column $i;
 
                 .content {
+                  flex-direction: column;
+                  width: 100%;
+                  border: 1px solid red;
 
                   .news-item {
 
