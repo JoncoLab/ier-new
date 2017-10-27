@@ -52,6 +52,7 @@ export class DropDown extends Component {
                                 key={item[1]}
                                 items={item.split("*")}
                                 leveled={true}
+                                alailable={this.state.available}
                             /> :
                             <ListItem
                                 passValue={this.passValue}
@@ -70,19 +71,20 @@ class ListItem extends Component {
     constructor(props) {
         super(props);
 
-        this.leveled = this.props.leveled;
+        this.leveled = props.leveled;
         this.getList = this.getList.bind(this);
 
         const list = this.getList();
 
         this.name = this.leveled ?
             list[0] :
-            this.props.items;
+            props.items;
         this.items = list.slice(1, list.length);
         this.className = this.leveled ?
             "list-item leveled" :
             "list-item";
         this.handleClick = this.handleClick.bind(this);
+        this.available = props.available;
     }
     getList() {
         let items = this.props.items,
@@ -109,6 +111,7 @@ class ListItem extends Component {
                         level={true}
                         passValue={this.props.passValue}
                         items={this.items}
+                        available={this.available}
                     />
                 </li>
             ) :
