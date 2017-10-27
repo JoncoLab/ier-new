@@ -5,12 +5,14 @@ export class Logo extends Component {
         super(props);
 
         this.handleClick = this.handleClick.bind(this);
+        this.available = props.menuAvailability;
     }
     handleClick(event) {
         const Logo = this;
 
         event.preventDefault();
-        Logo.props.passValue("main");
+
+        if (Logo.available) Logo.props.passValue("main");
     }
     render() {
         return (

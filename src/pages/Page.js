@@ -6,9 +6,6 @@ export class Page extends Component {
             <main
                 id={"main"}
                 className={this.props.className}
-                style={{
-                    flexGrow: 1
-                }}
             >
                 {this.props.children}
             </main>

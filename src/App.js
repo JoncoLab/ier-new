@@ -80,9 +80,6 @@ class App extends Component {
             $("#root").css({
                 height: "auto"
             });
-            $("footer").css({
-                backgroundColor: "red"
-            });
         });
     }
 

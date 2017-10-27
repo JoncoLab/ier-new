@@ -6,7 +6,11 @@ export class NavBar extends Component {
         return (
             <nav className="menu-item">
                 <h2>{this.props.name}</h2>
-                <DropDown passValue={this.props.passValue} items={this.props.items}/>
+                <DropDown
+                    passValue={this.props.passValue}
+                    items={this.props.items}
+                    available={this.props.menuAvailability}
+                />
             </nav>
         );
     }

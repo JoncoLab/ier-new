@@ -6,12 +6,13 @@ export class DropDown extends Component {
         super(props);
 
         this.state = {
-            available: true
+            available: props.available
         };
 
         this.getList = this.getList.bind(this);
         this.items = this.getList();
         this.passValue = this.passValue.bind(this);
+        this.level = this.props.level;
     }
     passValue(name) {
         this.props.passValue(name);
@@ -29,21 +30,19 @@ export class DropDown extends Component {
         }
         return list;
     }
-    static hideAll() {
-        const dropDowns = $("ul.drop-down");
-        dropDowns.css({
-            transform: "scale(0)"
-        });
-    }
     render() {
         return (
             <ul
+                style={{
+                    opacity: this.state.available ?
+                        1 :
+                        0
+                }}
                 className={
-                    this.props.level ?
+                    this.level ?
                         "drop-down level" :
                         "drop-down"
                 }
-                onClick={DropDown.hideAll}
             >
                 {
                     this.items.map((item) =>

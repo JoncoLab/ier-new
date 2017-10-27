@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import {DropDown} from "./DropDown";
 
 export class AddMenu extends Component {
-    items = [
-        'Деканат',
-        'Кафедри',
-        'Наукова діяльність',
-        'Міжнародна співпраця',
-        'Подвійні дипломи'
-    ];
+    constructor(props) {
+        super(props);
+
+        this.items = props.items;
+        this.name = props.name;
+    }
     render() {
         return (
             <nav className="add-menu">
-                <h2>ФМЕВ <span>☻</span></h2>
-                <DropDown passValue={this.props.passValue} items={this.items}/>
+                <h2>{this.name + " "}<span>☻</span></h2>
+                <DropDown
+                    passValue={this.props.passValue}
+                    items={this.items}
+                    available={this.props.menuAvailability}
+                />
             </nav>
         );
     }
