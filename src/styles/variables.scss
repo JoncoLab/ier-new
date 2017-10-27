@@ -123,39 +123,43 @@ $lightGrey: #BDBDBD;
 @keyframes templateHeader {
   from {
     left: -35%;
-    transform: scaleX(0);
+    transform: scaleX(20);
     transform-origin: left;
   }
 
   25% {
     left: 50%;
-    transform: scaleX(1);
+    transform: scaleX(-20);
     transform-origin: center;
   }
 
   35% {
-    transform: scaleX(2);
+    transform: scaleX(20);
   }
 
   50% {
     left: 100%;
-    transform: scaleX(0);
+    transform: scaleX(-20);
     transform-origin: right;
   }
 
   60% {
-    transform: scaleX(2);
+    transform: scaleX(20);
   }
 
   75% {
     left: 50%;
-    transform: scaleX(1);
+    transform: scaleX(-20);
     transform-origin: center;
+  }
+
+  90% {
+    transform: scaleX(20);
   }
 
   to {
     left: -35%;
-    transform: scaleX(0);
+    transform: scaleX(-20);
     transform-origin: left;
   }
 }

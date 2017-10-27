@@ -4,10 +4,15 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: $line * 110;
+  //min-width: $line * 94.6;
   max-width: 75%;
   min-height: $line * 37.5;
   max-height: $line * 45;
+
+  @media only screen and (max-width: $line * 102.4) {
+    min-width: 75%;
+    max-width: 90%;
+  }
 
   &.full-width {
     width: 100%;

@@ -412,17 +412,16 @@ html {
             &::after {
               display: block;
               content: '';
-              width: 15%;
-              height: $line / 2;
+              width: 5%;
+              height: $line / 2.5;
               transform-origin: left;
               transform: scaleX(0);
               position: absolute;
-              bottom: 10%;
+              bottom: 0;
               left: 0;
               animation: {
-                duration: $time * 7;
+                duration: $time * 100;
                 name: templateHeader;
-                timing-function: linear;
                 fill-mode: both;
                 iteration-count: infinite;
               }
