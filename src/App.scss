@@ -51,11 +51,6 @@ html {
           }
         }
 
-        //@import "styles/media/mediaS.scss";
-        //@import "styles/media/mediaM.scss";
-        //@import "styles/media/mediaL.scss";
-        //@import "styles/media/mediaXL.scss";
-
         @import "styles/contacts-block.scss";
         @import "styles/download-block.scss";
         @import "styles/subscribe-btn.scss";
@@ -67,7 +62,6 @@ html {
             color: $main;
           }
           flex-grow: 1;
-          overflow: hidden;
 
           @import "styles/header.scss";
         }
@@ -110,6 +104,97 @@ html {
             duration: $time * 9;
             iteration-count: infinite;
             timing-function: ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $line * 48) {
+    body {
+
+      .App {
+
+        #SubscribeBtn {
+          display: none;
+        }
+
+        header {
+          width: 100%;
+          min-height: $line * 60;
+
+          * {
+            position: static !important;
+            border: 1px solid red;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+
+          .nav-menu {
+            position: static !important;
+            min-height: inherit;
+            flex-wrap: wrap;
+            justify-content: space-between !important;
+            align-content: flex-start;
+
+            .logo {
+              flex-basis: 60% !important;
+              order: 1;
+            }
+
+            .search-box {
+              order: 4;
+              min-width: 90%;
+
+              .searchIco {
+
+              }
+
+              #search {
+
+              }
+            }
+
+            .main-menu {
+              order: 5;
+              min-width: 90%;
+
+              .menu-item {
+
+                h2 {
+
+                }
+              }
+            }
+
+            .add-menu {
+              order: 3;
+              max-width: 30%;
+              max-height: $line * 4;
+
+              h2 {
+
+              }
+            }
+
+            .drop-down {
+
+              .list-tem {
+
+                span {
+
+                }
+              }
+            }
+
+            .social-box {
+              order: 2;
+              flex-basis: 35% !important;
+              justify-content: space-between !important;
+              font: {
+                size: 2em !important;
+              }
+            }
           }
         }
       }
