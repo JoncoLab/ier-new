@@ -50,7 +50,6 @@ class App extends Component {
                         showPage(page);
                     },
                     error: function () {
-                        alert("Server responded with error and cookies haven't been set!");
                         showPage(name);
                     }
                 });
@@ -70,15 +69,19 @@ class App extends Component {
     }
 
     templateModeOff() {
-        const main = $("#main");
+        const App = this,
+            main = $("#main");
 
-        this.setState({
+        App.setState({
             template: false
         });
 
         main.slideDown(500, function () {
             $("#root").css({
                 height: "auto"
+            });
+            $("footer").css({
+                backgroundColor: "red"
             });
         });
     }
@@ -95,16 +98,15 @@ class App extends Component {
   render() {
     return (
       <div
-          className={"App " + (
-              this.state.template ?
-                  "template" :
-                  "content"
-          )}
+          className={this.state.template ? "App template" : "App content"}
           onLoad={this.appLoad}
       >
-          <Header passValue={this.switchPage}/>
+          <Header
+              menuAvailability={!this.state.template}
+              passValue={this.switchPage}
+          />
           <Main
-              contentPage={this.state.page}
+              targetPage={this.state.page}
               onContentLoad={this.templateModeOff}
           />
           <Footer/>

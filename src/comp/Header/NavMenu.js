@@ -27,7 +27,7 @@ export class NavMenu extends Component {
     render() {
         return (
             <nav className="nav-menu">
-                <Logo/>
+                <Logo passValue={this.props.passValue}/>
                 <Search/>
                 <div className="main-menu">
                     <NavBar passValue={this.props.passValue} name="Вступнику" items={this.abItems}/>

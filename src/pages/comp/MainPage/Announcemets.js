@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Arrows} from "./Arrows";
+import {Arrows} from "../Arrows";
 import * as firebase from "firebase";
 
 export class AnnouncementsBlock extends Component {

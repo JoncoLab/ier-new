@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import * as $ from "jquery";
 
 export class DropDown extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            available: true
+        };
 
         this.getList = this.getList.bind(this);
         this.items = this.getList();
@@ -24,9 +29,22 @@ export class DropDown extends Component {
         }
         return list;
     }
+    static hideAll() {
+        const dropDowns = $("ul.drop-down");
+        dropDowns.css({
+            transform: "scale(0)"
+        });
+    }
     render() {
         return (
-            <ul className="drop-down">
+            <ul
+                className={
+                    this.props.level ?
+                        "drop-down level" :
+                        "drop-down"
+                }
+                onClick={DropDown.hideAll}
+            >
                 {
                     this.items.map((item) =>
                         item[0] === '$' ?
@@ -88,7 +106,11 @@ class ListItem extends Component {
             (
                 <li className={this.className}>
                     {this.name}
-                    <DropDown passValue={this.props.passValue} items={this.items}/>
+                    <DropDown
+                        level={true}
+                        passValue={this.props.passValue}
+                        items={this.items}
+                    />
                 </li>
             ) :
             (
