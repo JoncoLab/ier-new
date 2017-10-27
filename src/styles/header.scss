@@ -165,6 +165,10 @@
           padding-right: $line * 3;
           border-right: $line / 2 solid white;
         }
+
+        .drop-down::before {
+          content: "вступнику";
+        }
       }
 
       &:last-of-type {
@@ -175,12 +179,13 @@
         h2 {
           padding-left: $line * 3;
         }
-      }
-
-      &:last-of-type {
 
         .drop-down {
           right: 0;
+
+          &::before {
+            content: "студенту";
+          }
         }
       }
 
@@ -211,6 +216,9 @@
       top-left-radius: $line;
       top-right-radius: $line;
     }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     h2 {
       padding: 0;
@@ -221,18 +229,22 @@
         size: 1.45em;
         weight: normal;
       }
+      letter-spacing: $line / 4;
     }
 
     .drop-down {
       width: 150%;
       left: -50%;
-      
       background: {
         image:
                 linear-gradient(to bottom, $main $line, transparent $line, transparent),
                 url("./img/translators-day.jpg");
         size: contain;
         position: bottom;
+      }
+
+      &::before {
+        content: "підменю";
       }
     }
 
