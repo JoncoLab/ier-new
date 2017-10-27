@@ -255,7 +255,7 @@
               size: 0.8em;
             }
 
-            &:after {
+            &::after {
               position: absolute;
               bottom: 100%;
               display: block;
