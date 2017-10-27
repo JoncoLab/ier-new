@@ -165,10 +165,6 @@
           padding-right: $line * 3;
           border-right: $line / 2 solid white;
         }
-
-        .drop-down::before {
-          content: "вступнику";
-        }
       }
 
       &:last-of-type {
@@ -179,9 +175,31 @@
         h2 {
           padding-left: $line * 3;
         }
+      }
+
+      &:first-of-type {
+        .drop-down {
+
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            content: "вступнику";
+          }
+        }
+      }
+
+      &:last-of-type {
 
         .drop-down {
           right: 0;
+
+          &::before,
+          &::after {
+            display: none;
+          }
 
           &::before {
             content: "студенту";
@@ -216,9 +234,6 @@
       top-left-radius: $line;
       top-right-radius: $line;
     }
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     h2 {
       padding: 0;
@@ -229,12 +244,12 @@
         size: 1.45em;
         weight: normal;
       }
-      letter-spacing: $line / 4;
     }
 
     .drop-down {
       width: 150%;
       left: -50%;
+
       background: {
         image:
                 linear-gradient(to bottom, $main $line, transparent $line, transparent),
@@ -243,8 +258,13 @@
         position: bottom;
       }
 
+      &::before,
+      &::after {
+        display: none;
+      }
+
       &::before {
-        content: "підменю";
+        content: "ФМЕВ";
       }
     }
 

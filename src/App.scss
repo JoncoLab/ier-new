@@ -22,11 +22,6 @@ html {
         }
 
         header {
-          width: 100%;
-          //min-height: $line * 56 $i;
-          //height: inherit;
-          //max-height: $line * 73 $i;
-
           * {
             position: static $i;
             margin: 0 $i;
@@ -35,9 +30,9 @@ html {
 
           .nav-menu {
             box-sizing: border-box;
-            width: 95%;
+            width: 95% $i;
             max-width: $line * 32 $i;
-            padding: $line * 3 0 $line * 3 0 $i;
+            padding: $line * 3 0 $i;
             min-height: inherit;
             flex-wrap: wrap;
             justify-content: space-evenly $i;
@@ -147,7 +142,7 @@ html {
 
               &::before {
                 content: "";
-                display: block;
+                display: block $i;
                 padding: $line * 1.5 $line;
                 margin: 0 0 $line 0;
                 width: 100%;
@@ -171,7 +166,7 @@ html {
                 position: absolute;
                 top: $line;
                 right: $line * 1.5;
-                display: block;
+                display: block $i;
                 content: "X";
                 color: $main;
                 font: {
@@ -220,15 +215,68 @@ html {
         main {
 
           .content-line {
+            flex-direction: column;
+            align-items: center $i;
+            justify-content: center $i;
+            min-width: 90% $i;
+            width: 95% $i;
+            max-width: 100% $i;
+            padding: 0 $i;
+            margin: $line auto $i;
+            min-height: $line * 20 $i;
+
+            &:not(.large) {
+              display: none $i;
+            }
 
             &.large {
-
+              margin: 0 0 $line 0 $i;
+              width: 100% $i;
+              height: $line * 26 $i;
             }
 
             .gallery {
+              width: 100% $i;
+              min-height: 100% $i;
+
+              .container {
+
+                img {
+                  height: inherit $i;
+                  width: 100% $i;
+                }
+              }
 
               .caption {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 100% $i;
+                height: 100% $i;
+                padding: 0  $i;
+                margin: 0 $i;
+                background: {
+                  color: transparent $i;
+                }
 
+                p {
+                  box-sizing: border-box;
+                  order: 2;
+                  background: {
+                    color: transparentize($blue, 0.3);
+                  }
+                  width: 100% $i;
+                  padding: $line * .2 $line / 2 $line * .2 $line $i;
+                  margin: 0 $i;
+                  font: {
+                    size: 0.8em $i;
+                  }
+                }
+              }
+
+              .arrow {
+                transform: none $i;
               }
             }
 
@@ -381,11 +429,9 @@ html {
 
         header {
           width: 100%;
-          //max-height: $line * 20;
           background: {
             color: $main;
           }
-          flex-grow: 1;
           z-index: 1000;
 
           @import "styles/header.scss";
