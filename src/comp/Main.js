@@ -6,9 +6,18 @@ import {NewsBlock} from "./Main/News";
 import {AnnouncementsBlock} from "./Main/Announcemets";
 
 export class Main extends Component {
+    constructor(props) {
+        super(props);
+
+        this.targetPage = this.props.contentPage;
+    }
+
     render() {
         return (
-            <main id={"main"}>
+            <Page
+                id={"main"}
+                onContentLoad={this.props.onContentLoad}
+            >
                 <ContentLine className="large">
                     <Gallery/>
                 </ContentLine>
@@ -78,6 +87,19 @@ export class Main extends Component {
                         </article>
                     </ContentBlock>
                 </ContentLine>
+            </Page>
+        );
+    }
+}
+
+class Page extends Component {
+    render() {
+        return (
+            <main
+                id={this.props.id}
+                onLoad={this.props.onContentLoad}
+            >
+                {this.props.children}
             </main>
         );
     }

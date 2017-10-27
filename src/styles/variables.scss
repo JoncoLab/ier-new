@@ -1,7 +1,7 @@
 $line: 10px;
 $time: 0.2s;
 
-$main: #01487e;
+$main: lighten(#01487e, 10%);
 $blue: #55a9cb;
 $lightBlue: #55a9cb;
 $black: #1a2e64;
@@ -26,6 +26,12 @@ $lightGrey: #BDBDBD;
 @font-face {
   font-family: IcoV2;
   src: url('./fonts/icoV2.ttf');
+}
+
+
+@font-face {
+  font-family: Logo;
+  src: url('./fonts/logo.ttf');
 }
 
 @mixin reset() {

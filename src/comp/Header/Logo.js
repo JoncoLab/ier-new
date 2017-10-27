@@ -4,7 +4,15 @@ export class Logo extends Component {
     render() {
         return (
             <a href="index.html" className="logo">
-                <img src="img/logo.png"  alt="Логотип факультету" />
+                <span
+                    className={"logo-img"}
+                    style={{
+                        fontFamily: "Logo, Helvetica, sans-serif"
+                    }}
+                    title="Логотип факультету"
+                >
+                    L
+                </span>
             </a>
         );
     }

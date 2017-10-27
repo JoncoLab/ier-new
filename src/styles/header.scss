@@ -14,11 +14,23 @@
     position: relative;
     flex-basis: 13%;
     margin: 0 auto 0 $line * 2;
-    padding: $line / 2 $line * 2;
-    box-shadow: $line * -10 0 0 0 $blue;
+    padding: $line / 2 $line $line / 2 0;
+    box-shadow: $line * -10 0 0 0 white;
 
     background: {
-      color: $blue;
+      color: white;
+    }
+
+    border: {
+      bottom-right-radius: 50%;
+      top: none;
+      left: none;
+      bottom: none;
+    }
+
+    text: {
+      transform: lowercase;
+      decoration: none;
     }
 
     &::after {
@@ -31,20 +43,26 @@
       box-sizing: border-box;
       border: {
         width: 4.1em;
-        style: solid;
-        color: $blue;
+        style: dashed;
+        color: white;
         right: none;
         top-color: transparent;
         bottom-color: transparent;
       }
-      z-index: 1000;
-      transform: scaleX(.7);
-      transform-origin: left;
+      z-index: -100;
+      transform:
+              scaleX(.45)
+              scaleY(.75)
+              rotate(10.75deg);
+      transform-origin: top left;
+      box-shadow: 0 $line 0 0 $main;
     }
 
-    img {
-      object-fit: contain;
-      width: 100%;
+    .logo-img {
+      font: {
+        size: 7.5em;
+      }
+      color: $main;
     }
   }
 

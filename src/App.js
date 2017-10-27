@@ -76,7 +76,7 @@ class App extends Component {
             template: false
         });
 
-        main.slideUp(500, function () {
+        main.slideDown(500, function () {
             $("#root").css({
                 height: "auto"
             });
@@ -103,7 +103,10 @@ class App extends Component {
           onLoad={this.appLoad}
       >
           <Header passValue={this.switchPage}/>
-          <Main/>
+          <Main
+              contentPage={this.state.page}
+              onContentLoad={this.templateModeOff}
+          />
           <Footer/>
           <ContactsBlock/>
           <DownloadBlock/>
