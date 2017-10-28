@@ -296,7 +296,7 @@
                 .news-item {
                   border: 1px solid black;
                   box-sizing: content-box;
-                  max-height: $line * 30;
+                  max-height: $line * 40;
                   width: 85%;
 
                   &:first-of-type {
@@ -304,7 +304,9 @@
                   }
 
                   .news-image {
-                    width: 100% $i;
+                    align-self: center;
+                    max-width: 100% $i;
+                    height: $line * 20 $i;
 
                     img {
                       object-fit: cover $i;
@@ -312,7 +314,8 @@
                   }
 
                   h3 {
-
+                    flex-grow: 1 $i;
+                    min-height: inherit $i;
                   }
 
                   .date {
