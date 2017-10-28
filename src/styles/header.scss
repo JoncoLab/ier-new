@@ -81,7 +81,7 @@
 
     .SearchIco {
       font: {
-        family: Ico;
+        family: $ico;
         size: 1.5em;
       }
       margin: 0 $line 0 0;
@@ -146,7 +146,7 @@
         padding: $line / 2;
         color: white;
         font: {
-          family: Helvetica;
+          family: $helvetica;
           size: 1.5em;
         }
         letter-spacing: $line / 4;
@@ -240,7 +240,7 @@
       margin: 0;
       color: white;
       font: {
-        family: Ico, Helvetica;
+        family: $ico;
         size: 1.45em;
         weight: normal;
       }
@@ -293,7 +293,7 @@
     font: {
       size: 0.8em;
       weight: bold;
-      family: Helvetica;
+      family: $helvetica;
     }
     transition: {
       duration: $time;
@@ -319,7 +319,7 @@
         color: white;
       }
       font: {
-        family: OpenSans, Helvetica, sans-serif;
+        family: $openSans;
         size: 1em;
       }
       text: {
@@ -328,7 +328,8 @@
       cursor: pointer;
 
       &:first-of-type {
-        margin: $line * .2 0 0 0;
+        margin: $line * .2
+        0 0 0;
       }
 
       &:not(:first-of-type) {
@@ -338,7 +339,7 @@
 
       span {
         font: {
-          family: Ico, Helvetica, sans-serif;
+          family: $ico;
           size: 1em;
         }
         color: white;
@@ -396,7 +397,7 @@
     align-items: center;
     align-self: flex-start;
     font: {
-      family: Ico;
+      family: $ico;
       size: 1.5em;
     }
 
@@ -413,7 +414,7 @@
 
       &.yt {
         font: {
-          family: IcoV2, Helvetica, sans-serif;
+          family: $icoV2;
         }
       }
 

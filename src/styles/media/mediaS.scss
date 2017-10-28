@@ -145,7 +145,7 @@
               }
               color: $main;
               font: {
-                family: Helvetica, sans-serif;
+                family: $helvetica;
                 size: 1.65em;
                 weight: normal;
               }
@@ -164,7 +164,7 @@
               content: "X";
               color: $main;
               font: {
-                family: Helvetica, sans-serif;
+                family: $helvetica;
                 size: 2em;
                 weight: bold;
               }
@@ -173,7 +173,7 @@
             .list-item {
               padding: $line * 1.5 $line $i;
               font: {
-                family: Helvetica, sans-serif $i;
+                family: $helvetica $i;
                 size: 1em $i;
                 weight: normal $i;
               }
@@ -207,8 +207,9 @@
       }
 
       main {
+
         .content-line {
-          flex-direction: column;
+          flex-direction: column $i;
           align-items: center $i;
           justify-content: center $i;
           min-width: 90% $i;
@@ -216,25 +217,21 @@
           max-width: 100% $i;
           padding: 0 $i;
           margin: $line auto $i;
-          min-height: $line * 20 $i;
+          min-height: $line * 24 $i;
+          max-height: none $i;
 
           &.large {
+            box-sizing: border-box;
             margin: 0 0 $line 0 $i;
             width: 100% $i;
-            height: $line * 26 $i;
+            height: $line * 24 $i;
+            max-height: $line * 26 $i;
           }
 
           .gallery {
             width: 100% $i;
-            min-height: 100% $i;
-
-            .container {
-
-              img {
-                height: inherit $i;
-                width: 100% $i;
-              }
-            }
+            min-height: $line * 24 $i;
+            max-height: $line * 26 $i;
 
             .caption {
               display: flex;
@@ -256,7 +253,8 @@
                   color: transparentize($blue, 0.3);
                 }
                 width: 100% $i;
-                padding: $line * .2 $line / 2 $line * .2 $line $i;
+                height: $line * 4 $i;
+                padding: $line / 2 $i;
                 margin: 0 $i;
                 font: {
                   size: 0.8em $i;
@@ -272,6 +270,7 @@
           .content-block {
             box-sizing: border-box;
             width: 97.5% $i;
+            height: $line * 20;
             margin: $line 0 $i;
             padding: 0 $i;
             font: {
@@ -282,34 +281,33 @@
               text-align: left $i;
             }
 
-            .content {
-
-              h3 {
-
-              }
-            }
-
-            .arrows {
-
-              span {
-
-              }
-            }
-
             &.news {
               flex-direction: column $i;
+              height: auto $i;
+              max-height: inherit $i;
 
               .content {
                 flex-direction: column;
                 width: 100%;
+                height: auto;
                 border: 1px solid red;
+                align-items: center;
 
                 .news-item {
+                  border: 1px solid black;
+                  box-sizing: content-box;
+                  max-height: $line * 30;
+                  width: 85%;
+
+                  &:first-of-type {
+                    display: none $i;
+                  }
 
                   .news-image {
+                    width: 100% $i;
 
                     img {
-
+                      object-fit: cover $i;
                     }
                   }
 
