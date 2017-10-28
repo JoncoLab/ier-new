@@ -327,6 +327,10 @@
       }
       cursor: pointer;
 
+      &:first-of-type {
+        margin: $line * .2 0 0 0;
+      }
+
       &:not(:first-of-type) {
         margin: $line / 5 0 0;
       }
