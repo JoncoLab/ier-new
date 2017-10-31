@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+#schedule-page {
+
+  table, tr, th, td {
+    border: {
+      width: $line / 2;
+      style: solid;
+      color: $main;
+      collapse: collapse;
+    }
+  }
+}

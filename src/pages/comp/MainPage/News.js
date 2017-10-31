@@ -7,7 +7,7 @@ export class NewsBlock extends Component {
         super(props);
 
         this.state = {
-            newsItem: 1
+            newsItem: 0
         };
 
         this.getContent = this.getContent.bind(this);
@@ -21,8 +21,6 @@ export class NewsBlock extends Component {
         const current = this;
         firebase.database(firebase.app("ier-new"))
             .ref("news")
-            .orderByKey()
-            .startAt(item)
             .limitToFirst(3)
             .once("value")
             .then(function(dataSnapshot) {
@@ -42,10 +40,9 @@ export class NewsBlock extends Component {
 
     nextNew() {
         this.setState({
-            newsItem: this.state.newsItem + 3
+            newsItem: + 3
         });
-        let nextItem = this.state.newsItem;
-        this.getContent("item-" + nextItem);
+        this.getContent("item-" + this.state.newsItem);
     }
 
     render() {

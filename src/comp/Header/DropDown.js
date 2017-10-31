@@ -33,11 +33,11 @@ export class DropDown extends Component {
     render() {
         return (
             <ul
-                style={{
-                    opacity: this.state.available ?
-                        1 :
-                        0
-                }}
+                // style={{
+                //     opacity: this.state.available ?
+                //         1 :
+                //         0
+                // }}
                 className={
                     this.level ?
                         "drop-down level" :
@@ -52,7 +52,7 @@ export class DropDown extends Component {
                                 key={item[1]}
                                 items={item.split("*")}
                                 leveled={true}
-                                alailable={this.state.available}
+                                //alailable={this.state.available}
                             /> :
                             <ListItem
                                 passValue={this.passValue}

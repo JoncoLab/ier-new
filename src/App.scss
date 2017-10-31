@@ -54,9 +54,9 @@ html {
           }
         }
 
-        @import "styles/contacts-block.scss";
-        @import "styles/download-block.scss";
-        @import "styles/subscribe-btn.scss";
+        @import "styles/templates/contacts-block.scss";
+        @import "styles/templates/download-block.scss";
+        @import "styles/templates/subscribe-btn.scss";
 
         header {
           width: 100%;
@@ -68,9 +68,8 @@ html {
           @import "styles/header.scss";
         }
 
-        main {
-          @import "styles/main.scss";
-        }
+        @import "styles/main/main.scss";
+        @import "styles/main/schedule.scss";
 
         footer {
           width: 100%;
